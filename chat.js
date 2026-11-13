@@ -5,7 +5,7 @@
    ========================================================= */
 
 (function () {
-  const PICKAXE_ID = "deployment-1cd7b228-7e39-4c35-8f69-d287edb75e95";
+  const PICKAXE_ID = "deployment-eb1996a7-986f-4179-8712-5ac2fcd917f5";
   const PICKAXE_SCRIPT = "https://studio.pickaxe.co/api/embed/bundle.js";
   const PICKAXE_BUTTON = ".pickaxe-embed > button";
 
