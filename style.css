@@ -887,6 +887,55 @@ strong { font-weight: 500; color: var(--white); }
 }
 .to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
 
+/* ---------- Burbuja "Pregunta al Coach" (Pickaxe) ---------- */
+/* La burbuja la dibuja Pickaxe (60px, a 20px de la esquina inferior derecha).
+   Esta etiqueta aparece a su izquierda y también abre el chat. */
+.chat-label {
+  position: fixed;
+  right: 92px;
+  bottom: 33px;
+  z-index: 49;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--paper);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font: 500 0.88rem/1 var(--font-sans);
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(8px);
+  transition: opacity .3s ease, transform .3s ease, visibility 0s linear .3s, background .2s;
+}
+.chat-label::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  transform: translateY(-50%) rotate(45deg);
+}
+.chat-label:hover { background: var(--white); }
+body.chat-ready .chat-label {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity .3s ease, transform .3s ease, background .2s;
+}
+body.chat-open .chat-label { opacity: 0; visibility: hidden; }
+
+/* El botón "volver arriba" se coloca encima de la burbuja */
+.to-top { right: 28px; bottom: 96px; }
+body.chat-open .to-top { opacity: 0; visibility: hidden; }
+
+@media (max-width: 600px) {
+  .chat-label { font-size: 0.82rem; padding: 0.55rem 0.85rem; }
+}
+
 /* ---------- Animaciones al hacer scroll ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
