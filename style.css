@@ -341,17 +341,6 @@ strong { font-weight: 500; color: var(--white); }
 }
 .hero__photo img, .about__photo img { width: 100%; height: 100%; object-fit: cover; }
 .hero__photo img { object-position: 69% center; }
-.hero__photo:has(img)::after { display: none; }
-/* Punto de luz */
-.hero__photo::after {
-  content: "";
-  position: absolute;
-  top: 16%; right: 18%;
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--white);
-  box-shadow: 0 0 20px 6px var(--glow), 0 0 60px 20px rgba(205, 215, 240, 0.25);
-}
 .hero__initials {
   font-size: 5.5rem;
   font-weight: 300;
