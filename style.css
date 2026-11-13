@@ -341,6 +341,7 @@ strong { font-weight: 500; color: var(--white); }
 }
 .hero__photo img, .about__photo img { width: 100%; height: 100%; object-fit: cover; }
 .hero__photo img { object-position: 69% center; }
+.about__photo img { object-position: center 45%; }
 .hero__initials {
   font-size: 5.5rem;
   font-weight: 300;
