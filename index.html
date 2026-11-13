@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="img/logo.svg?v=20261114b">
-  <link rel="stylesheet" href="style.css?v=20261114b">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg?v=20261114f">
+  <link rel="stylesheet" href="style.css?v=20261114f">
 </head>
 <body>
 
@@ -420,7 +420,11 @@
             <label>Teléfono *<input type="tel" name="telefono" required autocomplete="tel"></label>
             <label>Correo electrónico *<input type="email" name="email" required autocomplete="email"></label>
             <label>Mensaje *<textarea name="mensaje" rows="5" required></textarea></label>
-            <p class="form-error" id="formError" hidden>Por favor, completa todos los campos obligatorios con datos válidos.</p>
+            <div class="form-consent">
+              <input type="checkbox" id="privacidad" name="privacidad" required>
+              <label for="privacidad">He leído y acepto la <a href="politica-privacidad.html" target="_blank" rel="noopener">Política de privacidad</a> *</label>
+            </div>
+            <p class="form-error" id="formError" hidden>Por favor, completa todos los campos obligatorios con datos válidos y acepta la Política de privacidad.</p>
             <button type="submit" class="btn btn--primary btn--full">Enviar</button>
           </form>
 
@@ -464,11 +468,16 @@
     </div>
     <div class="container footer__bottom">
       <p>© <span id="year"></span> Itxaso Gurrea. Todos los derechos reservados.</p>
+      <nav class="footer__legal" aria-label="Información legal">
+        <a href="condiciones-contratacion.html" class="footer__legal-link">Condiciones de contratación</a>
+        <a href="politica-privacidad.html" class="footer__legal-link">Política de privacidad</a>
+        <a href="aviso-legal.html" class="footer__legal-link">Aviso legal</a>
+      </nav>
     </div>
   </footer>
 
   <a href="#inicio" class="to-top" id="toTop" aria-label="Volver arriba">↑</a>
 
-  <script src="script.js?v=20261114b"></script>
+  <script src="script.js?v=20261114f"></script>
 </body>
 </html>

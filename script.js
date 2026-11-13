@@ -269,6 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const formSuccess = document.getElementById("formSuccess");
 
   const isValid = (field) => {
+    if (field.type === "checkbox") return field.checked;
     const v = field.value.trim();
     if (!v) return false;
     if (field.type === "email") return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
@@ -276,11 +277,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return true;
   };
 
-  form.querySelectorAll("input, textarea").forEach((field) =>
-    field.addEventListener("input", () => {
+  form.querySelectorAll("input, textarea").forEach((field) => {
+    const clear = () => {
       if (isValid(field)) field.classList.remove("is-invalid");
-    })
-  );
+    };
+    field.addEventListener("input", clear);
+    field.addEventListener("change", clear);
+  });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
