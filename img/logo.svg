@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="398 444 284 210">
+  <defs>
+    <mask id="brillo">
+      <rect x="398" y="444" width="284" height="210" fill="#fff"/>
+      <circle cx="519" cy="556" r="15" fill="#000"/>
+    </mask>
+  </defs>
+  <g fill="none" stroke="#5b8c51" stroke-linecap="round">
+    <g stroke-width="15">
+      <line x1="411" y1="509" x2="430" y2="528"/>
+      <line x1="450" y1="481" x2="463" y2="504"/>
+      <line x1="492" y1="463" x2="499" y2="490"/>
+      <line x1="540" y1="458" x2="540" y2="485"/>
+      <line x1="587" y1="463" x2="580" y2="490"/>
+      <line x1="630" y1="481" x2="617" y2="504"/>
+      <line x1="669" y1="509" x2="650" y2="528"/>
+    </g>
+    <path d="M422 577 Q540 459 658 577 Q540 695 422 577 Z" stroke-width="16" stroke-linejoin="miter" stroke-linecap="butt"/>
+  </g>
+  <circle cx="540" cy="577" r="34" fill="#5b8c51" mask="url(#brillo)"/>
+</svg>

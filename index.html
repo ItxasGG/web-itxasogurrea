@@ -8,14 +8,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Logotipo (ojo) reutilizable -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <mask id="logo-brillo" maskUnits="userSpaceOnUse" x="398" y="444" width="284" height="210">
+        <rect x="398" y="444" width="284" height="210" fill="#fff"/>
+        <circle cx="519" cy="556" r="15" fill="#000"/>
+      </mask>
+      <symbol id="logo-eye" viewBox="398 444 284 210">
+        <g fill="none" stroke="currentColor" stroke-linecap="round">
+          <g stroke-width="15">
+            <line x1="411" y1="509" x2="430" y2="528"/>
+            <line x1="450" y1="481" x2="463" y2="504"/>
+            <line x1="492" y1="463" x2="499" y2="490"/>
+            <line x1="540" y1="458" x2="540" y2="485"/>
+            <line x1="587" y1="463" x2="580" y2="490"/>
+            <line x1="630" y1="481" x2="617" y2="504"/>
+            <line x1="669" y1="509" x2="650" y2="528"/>
+          </g>
+          <path d="M422 577 Q540 459 658 577 Q540 695 422 577 Z" stroke-width="16" stroke-linejoin="miter" stroke-linecap="butt"/>
+        </g>
+        <circle cx="540" cy="577" r="34" fill="currentColor" mask="url(#logo-brillo)"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- ============ CABECERA ============ -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="#inicio" class="logo">Itxaso Gurrea<span class="logo__dot"></span></a>
+      <a href="#inicio" class="logo"><svg class="logo__icon" aria-hidden="true"><use href="#logo-eye"/></svg>Itxaso Gurrea</a>
 
       <nav class="nav" id="nav" aria-label="Navegación principal">
         <a href="#servicios">Servicios</a>
@@ -205,6 +231,16 @@
               comprobado que es el verdadero motor del éxito. Sin una base sólida de confianza, ni la mejor
               estrategia de negocio funciona. Mi trabajo consiste en alinear tu mentalidad con tus objetivos para
               que tomes decisiones con seguridad y disfrutes, por fin, de tu trabajo.</p>
+          </div>
+        </div>
+
+        <div class="brand-eye reveal">
+          <svg class="brand-eye__icon" role="img" aria-label="Logotipo de Itxaso Gurrea: un ojo"><use href="#logo-eye"/></svg>
+          <div class="brand-eye__text">
+            <p class="eyebrow eyebrow--light">Por qué un ojo</p>
+            <p class="brand-eye__lead">Hay algo que me emociona especialmente de mi trabajo: ver cómo una persona recupera el brillo en la mirada.</p>
+            <p>Ese brillo que acompaña a la ilusión, a las ganas de hacer cambios, a volver a confiar en una misma y en sus posibilidades.</p>
+            <p>Por eso mi logo es un ojo. Representa lo que tanto valoro de acompañar a alguien en su proceso: que vuelva a mirarse con cariño, a escucharse y a dar espacio a lo que de verdad quiere.</p>
           </div>
         </div>
 
@@ -404,7 +440,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div>
-        <a href="#inicio" class="logo logo--light">Itxaso Gurrea<span class="logo__dot"></span></a>
+        <a href="#inicio" class="logo logo--light"><svg class="logo__icon" aria-hidden="true"><use href="#logo-eye"/></svg>Itxaso Gurrea</a>
         <p>Coach Ejecutivo y de Vida · Liderazgo con impacto. Vida con equilibrio.</p>
       </div>
       <div class="social social--light">
