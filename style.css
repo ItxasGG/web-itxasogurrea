@@ -340,6 +340,8 @@ strong { font-weight: 500; color: var(--white); }
   box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.6);
 }
 .hero__photo img, .about__photo img { width: 100%; height: 100%; object-fit: cover; }
+.hero__photo img { object-position: 69% center; }
+.hero__photo:has(img)::after { display: none; }
 /* Punto de luz */
 .hero__photo::after {
   content: "";
