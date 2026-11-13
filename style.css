@@ -67,7 +67,14 @@ strong { font-weight: 600; color: var(--ink); }
 .eyebrow::before { content: "[ "; }
 .eyebrow::after { content: " ]"; }
 .eyebrow--light { color: var(--brand); }
-.section .eyebrow { color: var(--brand); }
+.section .eyebrow {
+  color: var(--brand);
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
 
 /* ---------- Botones ---------- */
 .btn {
@@ -208,7 +215,7 @@ strong { font-weight: 600; color: var(--ink); }
 .section__head > *,
 #enfoque .container > * { grid-column: 2; }
 .section__head > .eyebrow,
-#enfoque .container > .eyebrow { grid-column: 1; grid-row: 1 / span 3; align-self: start; padding-top: 0.6rem; }
+#enfoque .container > .eyebrow { grid-column: 1; grid-row: 1 / span 3; align-self: start; padding-top: 0.3rem; }
 #enfoque .container { margin: 0 auto; width: min(var(--container), 100% - var(--gutter)); }
 #enfoque .container > .btn { justify-self: start; }
 #enfoque .section__lead { max-width: 560px; }
