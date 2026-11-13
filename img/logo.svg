@@ -5,7 +5,7 @@
       <circle cx="519" cy="556" r="15" fill="#000"/>
     </mask>
   </defs>
-  <g fill="none" stroke="#5b8c51" stroke-linecap="round">
+  <g fill="none" stroke="#5b8b4f" stroke-linecap="round">
     <g stroke-width="15">
       <line x1="411" y1="509" x2="430" y2="528"/>
       <line x1="450" y1="481" x2="463" y2="504"/>
@@ -17,5 +17,5 @@
     </g>
     <path d="M422 577 Q540 459 658 577 Q540 695 422 577 Z" stroke-width="16" stroke-linejoin="miter" stroke-linecap="butt"/>
   </g>
-  <circle cx="540" cy="577" r="34" fill="#5b8c51" mask="url(#brillo)"/>
+  <circle cx="540" cy="577" r="34" fill="#5b8b4f" mask="url(#brillo)"/>
 </svg>

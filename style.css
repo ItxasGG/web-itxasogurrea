@@ -27,8 +27,7 @@
   --line-light: rgba(19, 26, 42, 0.12);
 
   --white: #ffffff;
-  --brand: #6fa063;      /* verde del logotipo, aclarado para fondos oscuros */
-  --brand-deep: #5b8c51; /* verde original del logotipo */
+  --brand: #5b8b4f;      /* verde del logotipo */
   --glow: rgba(205, 215, 240, 0.55);
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -150,8 +149,8 @@ h1, h2, h3 { margin: 0; line-height: 1.12; font-weight: 400; letter-spacing: -0.
 }
 .logo--light { color: var(--white); }
 .logo__icon {
-  width: 36px;
-  height: 27px;
+  width: 28px;
+  height: 21px;
   flex: none;
   color: var(--brand);
 }
@@ -509,7 +508,7 @@ strong { font-weight: 500; color: var(--white); }
 /* Por qué un ojo */
 .brand-eye {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 130px 1fr;
   gap: 4rem;
   align-items: center;
   max-width: 980px;
@@ -517,7 +516,7 @@ strong { font-weight: 500; color: var(--white); }
   padding: 3.5rem;
   border: 1px solid var(--line-dark);
   background:
-    radial-gradient(ellipse 50% 70% at 15% 50%, rgba(111, 160, 99, 0.16), transparent 70%),
+    radial-gradient(ellipse 50% 70% at 15% 50%, rgba(91, 139, 79, 0.14), transparent 70%),
     linear-gradient(160deg, rgba(41, 52, 77, 0.55), rgba(19, 26, 42, 0.35));
 }
 .brand-eye__icon {
@@ -525,7 +524,7 @@ strong { font-weight: 500; color: var(--white); }
   height: auto;
   aspect-ratio: 284 / 210;
   color: var(--brand);
-  filter: drop-shadow(0 0 28px rgba(111, 160, 99, 0.35));
+  filter: drop-shadow(0 0 18px rgba(91, 139, 79, 0.35));
 }
 .brand-eye__lead {
   font-size: clamp(1.3rem, 2.4vw, 1.7rem);
@@ -865,7 +864,7 @@ strong { font-weight: 500; color: var(--white); }
 
   .hero__inner, .split, .split--about { grid-template-columns: 1fr; gap: 3.5rem; }
   .brand-eye { grid-template-columns: 1fr; }
-  .brand-eye__icon { width: 150px; }
+  .brand-eye__icon { width: 100px; }
   .hero__visual { order: -1; }
   .hero__photo, .about__photo { width: min(300px, 72vw); }
   .hero__badge { left: -1.5rem; }
