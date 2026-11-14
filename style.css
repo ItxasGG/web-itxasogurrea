@@ -517,6 +517,18 @@ strong { font-weight: 600; color: var(--ink); }
   border-radius: 50%;
   object-fit: cover;
 }
+.testimonial__title,
+.legal-page .testimonial__title {
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
 .testimonial blockquote { margin: 0 0 1.4rem; font-size: 0.97rem; line-height: 1.6; color: var(--ink-soft); }
 .testimonial blockquote p { color: var(--ink-soft); }
 .testimonial blockquote p:last-child { margin-bottom: 0; }
