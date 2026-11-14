@@ -894,6 +894,27 @@ body.lightbox-open { overflow: hidden; }
 .service-list__num::after { content: " ]"; }
 .service-list strong { color: var(--ink); }
 .service-note { padding-left: 1.2rem; border-left: 2px solid var(--brand); }
+.service-stats { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--ink); margin: 1.6rem 0 1rem; }
+.service-stat { padding: 1.4rem 1.2rem 1.4rem 0; border-bottom: 1px solid var(--line); }
+.service-stat:nth-child(even) { padding-left: 1.2rem; border-left: 1px solid var(--line); }
+.service-stat__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  color: var(--brand);
+}
+.service-stat__label {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 .service-closing {
   margin: 3rem 0 1.4rem;
   padding-top: 1.2rem;
