@@ -270,7 +270,8 @@ strong { font-weight: 600; color: var(--ink); }
   object-fit: cover;
 }
 .hero__photo img { object-position: 69% center; }
-.about__photo img { object-position: 78% center; }
+.about__photo { aspect-ratio: 2 / 3; background: var(--white); }
+.about__photo img { object-position: center top; }
 
 .hero__badge {
   display: flex;
