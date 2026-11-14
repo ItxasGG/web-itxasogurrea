@@ -509,6 +509,14 @@ strong { font-weight: 600; color: var(--ink); }
   letter-spacing: 0.06em;
   color: var(--brand);
 }
+.testimonial__photo {
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin: 0 0 1.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .testimonial blockquote { margin: 0 0 1.4rem; font-size: 0.97rem; line-height: 1.6; color: var(--ink-soft); }
 .testimonial blockquote p { color: var(--ink-soft); }
 .testimonial blockquote p:last-child { margin-bottom: 0; }
