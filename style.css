@@ -271,7 +271,7 @@ strong { font-weight: 600; color: var(--ink); }
   height: 100%;
   object-fit: cover;
 }
-.hero__photo img { object-position: 69% center; }
+.hero__photo img { object-position: 90% center; }
 .about__photo { aspect-ratio: 2 / 3; background: var(--white); }
 .about__photo img { object-position: center top; }
 
