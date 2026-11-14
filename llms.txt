@@ -13,8 +13,8 @@ Su metodología combina Programación Neurolingüística (PNL), Inteligencia Emo
 ## Páginas principales
 
 - [Inicio](https://www.itxasogurrea.com/): servicios, trayectoria, testimonios, libro, comunidad y contacto.
-- [Sobre mí](https://www.itxasogurrea.com/sobre-mi.html): trayectoria y enfoque de trabajo.
-- [Preguntas frecuentes](https://www.itxasogurrea.com/preguntas-frecuentes.html): 47 respuestas sobre el coaching, los programas, los precios y la contratación.
+- [Sobre mí](https://www.itxasogurrea.com/sobre-mi): trayectoria y enfoque de trabajo.
+- [Preguntas frecuentes](https://www.itxasogurrea.com/preguntas-frecuentes): 47 respuestas sobre el coaching, los programas, los precios y la contratación.
 
 ## Servicios
 
