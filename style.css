@@ -241,6 +241,8 @@ strong { font-weight: 600; color: var(--ink); }
   text-transform: uppercase;
   color: var(--ink);
 }
+.hero__role { display: block; line-height: 1.4; margin-bottom: 1.4rem; }
+.hero__name { display: block; }
 .hero__tagline {
   margin: 1.6rem 0 2.2rem;
   font-family: var(--font-display);
@@ -659,6 +661,7 @@ body.lightbox-open { overflow: hidden; }
 
 .faq { border-top: 1px solid var(--ink); }
 .faq-item { border-bottom: 1px solid var(--line); }
+.legal-page .faq-heading { margin: 0; padding: 0; border: 0; font: inherit; letter-spacing: 0; text-transform: none; }
 .faq-q {
   width: 100%;
   display: flex; justify-content: space-between; align-items: center; gap: 1.5rem;

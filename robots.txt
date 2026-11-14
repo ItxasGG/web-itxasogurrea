@@ -1,0 +1,6 @@
+# Itxaso Gurrea · itxasogurrea.com
+# Se permite el acceso a todos los buscadores y asistentes de IA.
+User-agent: *
+Allow: /
+
+Sitemap: https://itxasogurrea.com/sitemap.xml
