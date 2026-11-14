@@ -906,6 +906,13 @@ body.lightbox-open { overflow: hidden; }
   letter-spacing: -0.045em;
   color: var(--brand);
 }
+.service-source {
+  margin: 0.4rem 0 0;
+  font-size: 0.78rem !important;
+  line-height: 1.5;
+  color: var(--muted) !important;
+}
+.service-source a { color: var(--muted); }
 .service-stat__label {
   display: block;
   margin-top: 0.7rem;
