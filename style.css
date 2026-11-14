@@ -15,7 +15,7 @@
   --line-strong: rgba(17, 17, 17, 0.85);
   --white: #ffffff;
   --brand: #5b8b4f;      /* verde del logotipo y color de acento */
-  --brand-hover: #e68ba0; /* rosa al pasar el ratón */
+  --brand-hover: #f7bd70; /* naranja pastel al pasar el ratón */
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
