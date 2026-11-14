@@ -15,7 +15,7 @@
   --line-strong: rgba(17, 17, 17, 0.85);
   --white: #ffffff;
   --brand: #5b8b4f;      /* verde del logotipo y color de acento */
-  --brand-dark: #4a7340; /* verde para el estado hover */
+  --brand-hover: #e68ba0; /* rosa al pasar el ratón */
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
@@ -96,7 +96,7 @@ strong { font-weight: 600; color: var(--ink); }
 .btn:hover::after { transform: translateX(4px); }
 
 .btn--primary { background: var(--brand); border-color: var(--brand); color: var(--white); font-weight: 600; }
-.btn--primary:hover { background: var(--brand-dark); border-color: var(--brand-dark); color: var(--white); }
+.btn--primary:hover { background: var(--brand-hover); border-color: var(--brand-hover); color: var(--ink); }
 
 .btn--ghost { background: transparent; color: var(--ink); }
 .btn--ghost:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
@@ -150,7 +150,7 @@ strong { font-weight: 600; color: var(--ink); }
 .nav a.is-active::after { content: " ]"; }
 
 .nav__cta.btn--primary { background: var(--brand); border-color: var(--brand); color: var(--white); }
-.nav__cta.btn--primary:hover { background: var(--brand-dark); border-color: var(--brand-dark); }
+.nav__cta.btn--primary:hover { background: var(--brand-hover); border-color: var(--brand-hover); color: var(--ink); }
 
 .nav-toggle {
   display: none;
@@ -380,16 +380,21 @@ strong { font-weight: 600; color: var(--ink); }
   border-bottom: 1px solid var(--ink);
   padding-bottom: 0.2rem;
 }
-.card__link:hover { color: var(--brand); border-color: var(--brand); }
+.card__link:hover { color: var(--brand-hover); border-color: var(--brand-hover); }
 
 .card--featured { background: var(--brand); }
-.card--featured:hover { background: var(--brand-dark); }
+.card--featured:hover { background: var(--brand-hover); }
+.card--featured:hover .card__title,
+.card--featured:hover .card__link { color: var(--ink); border-color: var(--ink); }
+.card--featured:hover .card__num,
+.card--featured:hover .card__subtitle,
+.card--featured:hover p:not(.card__subtitle) { color: var(--ink) !important; }
 .card--featured .card__title,
 .card--featured .card__link { color: var(--white); border-color: var(--white); }
 .card--featured .card__num,
 .card--featured .card__subtitle { color: rgba(255, 255, 255, 0.78) !important; }
 .card--featured p:not(.card__subtitle) { color: rgba(255, 255, 255, 0.92); }
-.card--featured .card__link:hover { color: var(--white); opacity: 0.7; }
+.card--featured .card__link:hover { opacity: 0.7; }
 
 .services-closing {
   margin: 5rem 0 0;
@@ -672,7 +677,7 @@ body.lightbox-open { overflow: hidden; }
   text-align: left;
   cursor: pointer;
 }
-.faq-q:hover { color: var(--brand); }
+.faq-q:hover { color: var(--brand-hover); }
 .faq-q__icon {
   flex: 0 0 auto;
   font-size: 1.2rem;
@@ -705,7 +710,7 @@ body.lightbox-open { overflow: hidden; }
   color: var(--ink);
 }
 .contact-info a::after { content: "→"; font-weight: 400; transition: transform .2s; }
-.contact-info a:hover { color: var(--brand); }
+.contact-info a:hover { color: var(--brand-hover); }
 .contact-info a:hover::after { transform: translateX(4px); }
 .contact-note { padding-top: 1rem; border-top: 1px solid var(--line); }
 .contact-note strong { display: block; margin-bottom: 0.4rem; }
@@ -802,7 +807,7 @@ body.lightbox-open { overflow: hidden; }
 .footer__legal-link { color: var(--ink); text-decoration: none; }
 .footer__legal-link::before { content: "[ "; }
 .footer__legal-link::after { content: " ]"; }
-.footer__legal-link:hover { color: var(--brand); }
+.footer__legal-link:hover { color: var(--brand-hover); }
 .footer__legal-link::before, .footer__legal-link::after { color: var(--brand); }
 
 /* ---------- Páginas legales ---------- */
@@ -918,6 +923,7 @@ body.lightbox-open { overflow: hidden; }
   z-index: 90;
 }
 .to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { background: var(--brand-hover); color: var(--ink); }
 
 /* ---------- Burbuja "Pregunta al Coach" (Pickaxe) ---------- */
 /* La burbuja la dibuja Pickaxe (60px, a 20px de la esquina inferior derecha).
@@ -942,7 +948,7 @@ body.lightbox-open { overflow: hidden; }
   transform: translateX(8px);
   transition: opacity .3s ease, transform .3s ease, visibility 0s linear .3s, background .2s, color .2s;
 }
-.chat-label:hover { background: var(--brand-dark); border-color: var(--brand-dark); }
+.chat-label:hover { background: var(--brand-hover); border-color: var(--brand-hover); color: var(--ink); }
 body.chat-ready .chat-label {
   opacity: 1;
   visibility: visible;
