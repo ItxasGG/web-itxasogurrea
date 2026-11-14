@@ -383,18 +383,13 @@ strong { font-weight: 600; color: var(--ink); }
 .card__link:hover { color: var(--brand-hover); border-color: var(--brand-hover); }
 
 .card--featured { background: var(--brand); }
-.card--featured:hover { background: var(--brand-hover); }
-.card--featured:hover .card__title,
-.card--featured:hover .card__link { color: var(--ink); border-color: var(--ink); }
-.card--featured:hover .card__num,
-.card--featured:hover .card__subtitle,
-.card--featured:hover p:not(.card__subtitle) { color: var(--ink) !important; }
+.card--featured:hover { background: var(--brand); }  /* la tarjeta destacada no cambia de color */
 .card--featured .card__title,
 .card--featured .card__link { color: var(--white); border-color: var(--white); }
 .card--featured .card__num,
 .card--featured .card__subtitle { color: rgba(255, 255, 255, 0.78) !important; }
 .card--featured p:not(.card__subtitle) { color: rgba(255, 255, 255, 0.92); }
-.card--featured .card__link:hover { opacity: 0.7; }
+.card--featured .card__link:hover { color: var(--brand-hover); border-color: var(--brand-hover); }
 
 .services-closing {
   margin: 5rem 0 0;
