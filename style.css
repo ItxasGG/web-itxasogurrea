@@ -550,6 +550,68 @@ strong { font-weight: 600; color: var(--ink); }
   color: var(--ink);
 }
 
+/* ---------- Libros ---------- */
+.split--book { align-items: start; }
+.book-covers { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.book-cover { margin: 0; }
+.book-cover img { width: 100%; height: auto; aspect-ratio: 666 / 1000; object-fit: cover; }
+.book-cover__link { display: block; cursor: zoom-in; }
+.book-cover__link img { transition: opacity .2s; }
+.book-cover__link:hover img { opacity: 0.88; }
+.book-cover figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.book-cover figcaption::before { content: "[ "; color: var(--brand); }
+.book-cover figcaption::after { content: " ]"; color: var(--brand); }
+.book-closing + .btn { margin-top: 0.4rem; }
+
+/* Imagen ampliada */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4rem 1rem 2rem;
+  background: rgba(17, 17, 17, 0.96);
+  overflow-y: auto;
+  cursor: zoom-out;
+}
+.lightbox[hidden] { display: none; }
+.lightbox__img { width: auto; max-width: min(900px, 100%); height: auto; cursor: default; }
+.lightbox__close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 44px; height: 44px;
+  border: 1px solid var(--white);
+  background: transparent;
+  color: var(--white);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox__close:hover { background: var(--white); color: var(--ink); }
+body.lightbox-open { overflow: hidden; }
+.book-closing {
+  margin-top: 2.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--ink) !important;
+}
+
 /* ---------- Comunidad ---------- */
 .tags { list-style: none; padding: 0; margin: 2rem 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
 .tags li {

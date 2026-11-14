@@ -4,6 +4,7 @@
    - Cabecera al hacer scroll + enlace activo
    - Animaciones de aparición
    - Contador de cifras
+   - Ampliar imágenes del libro
    - Validación del formulario de contacto
    ========================================================= */
 
@@ -101,6 +102,51 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     document.querySelectorAll("[data-count]").forEach((el) => countObserver.observe(el));
+  }
+
+  /* ---------- Ampliar imágenes (portada y contraportada del libro) ---------- */
+  const lightboxLinks = document.querySelectorAll("[data-lightbox]");
+  if (lightboxLinks.length) {
+    const box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-label", "Imagen ampliada");
+    box.hidden = true;
+    box.innerHTML = `
+      <button type="button" class="lightbox__close" aria-label="Cerrar">×</button>
+      <img class="lightbox__img" alt="">`;
+    document.body.appendChild(box);
+    const boxImg = box.querySelector(".lightbox__img");
+    const closeBtn = box.querySelector(".lightbox__close");
+    let lastLink = null;
+
+    const closeBox = () => {
+      box.hidden = true;
+      document.body.classList.remove("lightbox-open");
+      if (lastLink) lastLink.focus();
+    };
+
+    lightboxLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        lastLink = link;
+        boxImg.src = link.href;
+        boxImg.alt = link.querySelector("img")?.alt || "";
+        box.hidden = false;
+        box.scrollTop = 0;
+        document.body.classList.add("lightbox-open");
+        closeBtn.focus();
+      });
+    });
+
+    closeBtn.addEventListener("click", closeBox);
+    box.addEventListener("click", (e) => {
+      if (e.target === box) closeBox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !box.hidden) closeBox();
+    });
   }
 
   /* ---------- Formulario de contacto ---------- */
