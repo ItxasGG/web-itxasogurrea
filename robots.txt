@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://itxasogurrea.com/sitemap.xml
+Sitemap: https://www.itxasogurrea.com/sitemap.xml
