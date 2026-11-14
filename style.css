@@ -537,6 +537,7 @@ strong { font-weight: 600; color: var(--ink); }
 /* ---------- Sobre mí ---------- */
 .split--about { grid-template-columns: 1fr 1fr; gap: 3rem; }
 .about__visual { width: 100%; max-width: 520px; }
+.about-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; }
 .about__quote {
   margin: 2.2rem 0 2.4rem;
   padding: 1.2rem 0 0;
@@ -756,7 +757,7 @@ strong { font-weight: 600; color: var(--ink); }
 .legal-page p, .legal-page li { color: var(--ink-soft); }
 .legal-page ul { padding-left: 1.2rem; margin: 0 0 1rem; }
 .legal-page li { margin-bottom: 0.5rem; }
-.legal-page a { color: var(--ink); text-underline-offset: 3px; }
+.legal-page a:not(.btn) { color: var(--ink); text-underline-offset: 3px; }
 .legal-meta {
   font-size: 0.7rem;
   font-weight: 500;
@@ -767,6 +768,29 @@ strong { font-weight: 600; color: var(--ink); }
 }
 .legal-content > .legal-meta:first-child { margin-top: 0; margin-bottom: 1.5rem; }
 .legal-notice { border-top: 1px solid var(--ink); padding-top: 1.2rem; }
+
+/* ---------- Página Sobre mí (currículum) ---------- */
+.bio-page .split--about { align-items: start; }
+.bio-page .about__visual { position: sticky; top: calc(var(--header-h) + 2rem); }
+.bio-content p { font-size: 1.02rem; }
+.bio-page .bio-areas { list-style: none; padding: 0; margin: 0 0 2rem; border-top: 1px solid var(--ink); }
+.bio-page .bio-areas li { padding: 1rem 0; margin: 0; border-bottom: 1px solid var(--line); }
+.bio-areas strong { color: var(--brand); }
+.bio-closing {
+  margin: 2.6rem 0 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem) !important;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--ink) !important;
+}
+@media (max-width: 1024px) {
+  .bio-page .about__visual { position: static; max-width: 420px; }
+}
 
 /* ---------- Volver arriba ---------- */
 .to-top {
