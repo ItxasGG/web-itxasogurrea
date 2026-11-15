@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario de formaciones · Itxaso Gurrea</title>
+  <meta name="description" content="Calendario de formaciones online de Itxaso Gurrea: fechas y horarios de los seminarios Círculo PRO y de la masterclass gratuita «Objetivos 2027».">
+  <link rel="canonical" href="https://www.itxasogurrea.com/calendario">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Itxaso Gurrea">
+  <meta property="og:url" content="https://www.itxasogurrea.com/calendario">
+  <meta property="og:title" content="Calendario de formaciones · Itxaso Gurrea">
+  <meta property="og:description" content="Fechas y horarios de los seminarios Círculo PRO y de la masterclass gratuita «Objetivos 2027».">
+  <meta property="og:image" content="https://www.itxasogurrea.com/img/og-itxaso-gurrea.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Itxaso Gurrea, coach ejecutivo y de vida">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg?v=20261117p">
+  <link rel="stylesheet" href="style.css?v=20261117p">
+</head>
+<body>
+
+  <header class="header header--sub is-scrolled">
+    <div class="container header__inner">
+      <a href="index.html" class="logo"><img src="img/logo.svg?v=20261117p" alt="" class="logo__icon">Itxaso Gurrea</a>
+      <nav class="subnav" aria-label="Navegación principal">
+        <a href="calendario.html" aria-current="page">Calendario</a>
+        <a href="index.html" class="btn btn--primary btn--sm nav__cta">Volver a la web</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section legal-page service-page">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Formaciones</p>
+        <h1 class="section__title">Calendario de formaciones</h1>
+        <p class="section__lead">Consulta las fechas de los próximos seminarios y masterclass. Entra en cada formación para ver todos los detalles.</p>
+      </div>
+
+      <!-- El calendario se genera con calendario.js a partir de data/formaciones.js -->
+      <section class="cal" id="calendario" aria-labelledby="cal-titulo" hidden>
+        <div class="cal__bar">
+          <h2 class="cal__title" id="cal-titulo" aria-live="polite"></h2>
+          <div class="cal__nav">
+            <button type="button" class="cal__arrow" id="cal-anterior" aria-label="Mes anterior"><span aria-hidden="true">←</span></button>
+            <button type="button" class="cal__arrow" id="cal-siguiente" aria-label="Mes siguiente"><span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+        <p class="cal__note">Horario en hora peninsular española.</p>
+        <table class="cal__table" aria-labelledby="cal-titulo">
+          <thead>
+            <tr>
+              <th scope="col"><abbr title="lunes"><span class="cal__wd-long">Lun</span><span class="cal__wd-short" aria-hidden="true">L</span></abbr></th>
+              <th scope="col"><abbr title="martes"><span class="cal__wd-long">Mar</span><span class="cal__wd-short" aria-hidden="true">M</span></abbr></th>
+              <th scope="col"><abbr title="miércoles"><span class="cal__wd-long">Mié</span><span class="cal__wd-short" aria-hidden="true">X</span></abbr></th>
+              <th scope="col"><abbr title="jueves"><span class="cal__wd-long">Jue</span><span class="cal__wd-short" aria-hidden="true">J</span></abbr></th>
+              <th scope="col"><abbr title="viernes"><span class="cal__wd-long">Vie</span><span class="cal__wd-short" aria-hidden="true">V</span></abbr></th>
+              <th scope="col"><abbr title="sábado"><span class="cal__wd-long">Sáb</span><span class="cal__wd-short" aria-hidden="true">S</span></abbr></th>
+              <th scope="col"><abbr title="domingo"><span class="cal__wd-long">Dom</span><span class="cal__wd-short" aria-hidden="true">D</span></abbr></th>
+            </tr>
+          </thead>
+          <tbody id="cal-cuerpo"></tbody>
+        </table>
+      </section>
+
+      <!-- ===== Próximas formaciones: lista escrita a mano, en orden cronológico.
+           Al añadir una formación, añade aquí un <li> por fecha (data-fin = día y hora de fin).
+           Las fechas pasadas se ocultan solas, pero conviene borrarlas de vez en cuando. ===== -->
+      <section class="agenda" aria-labelledby="proximas-titulo">
+        <h2 id="proximas-titulo">Próximas formaciones</h2>
+        <p class="cal__note">Horario en hora peninsular española.</p>
+        <ol class="agenda__list" data-proximas="agenda-vacia">
+          <li class="agenda__item" data-fin="2026-11-16T12:30">
+            <p class="agenda__date"><time datetime="2026-11-16T11:00+01:00">Lunes 16 de noviembre de 2026</time><span>De 11:00 a 12:30</span></p>
+            <div class="agenda__body">
+              <p class="cal-tags"><span class="cal-tag cal-tag--seminario">Seminario</span> <span class="cal-tag cal-tag--miembros">Solo miembros</span></p>
+              <h3 class="agenda__title">Seminario Círculo PRO</h3>
+              <p class="agenda__meta">Acceso: exclusivo para miembros de Círculo PRO · Online · 90 minutos</p>
+            </div>
+            <a class="agenda__link" href="formaciones/seminario-circulo-pro.html">Ver formación<span class="sr-only">: Seminario Círculo PRO, 16 de noviembre</span></a>
+          </li>
+          <li class="agenda__item" data-fin="2026-11-23T12:30">
+            <p class="agenda__date"><time datetime="2026-11-23T11:00+01:00">Lunes 23 de noviembre de 2026</time><span>De 11:00 a 12:30</span></p>
+            <div class="agenda__body">
+              <p class="cal-tags"><span class="cal-tag cal-tag--seminario">Seminario</span> <span class="cal-tag cal-tag--miembros">Solo miembros</span></p>
+              <h3 class="agenda__title">Seminario Círculo PRO</h3>
+              <p class="agenda__meta">Acceso: exclusivo para miembros de Círculo PRO · Online · 90 minutos</p>
+            </div>
+            <a class="agenda__link" href="formaciones/seminario-circulo-pro.html">Ver formación<span class="sr-only">: Seminario Círculo PRO, 23 de noviembre</span></a>
+          </li>
+          <li class="agenda__item" data-fin="2026-12-14T12:30">
+            <p class="agenda__date"><time datetime="2026-12-14T11:00+01:00">Lunes 14 de diciembre de 2026</time><span>De 11:00 a 12:30</span></p>
+            <div class="agenda__body">
+              <p class="cal-tags"><span class="cal-tag cal-tag--seminario">Seminario</span> <span class="cal-tag cal-tag--miembros">Solo miembros</span></p>
+              <h3 class="agenda__title">Seminario Círculo PRO</h3>
+              <p class="agenda__meta">Acceso: exclusivo para miembros de Círculo PRO · Online · 90 minutos</p>
+            </div>
+            <a class="agenda__link" href="formaciones/seminario-circulo-pro.html">Ver formación<span class="sr-only">: Seminario Círculo PRO, 14 de diciembre</span></a>
+          </li>
+          <li class="agenda__item" data-fin="2026-12-16T21:30">
+            <p class="agenda__date"><time datetime="2026-12-16T20:30+01:00">Miércoles 16 de diciembre de 2026</time><span>De 20:30 a 21:30</span></p>
+            <div class="agenda__body">
+              <p class="cal-tags"><span class="cal-tag cal-tag--masterclass">Masterclass</span></p>
+              <h3 class="agenda__title">Masterclass «Objetivos 2027»</h3>
+              <p class="agenda__meta">Acceso: abierta y gratuita · Online · 60 minutos</p>
+            </div>
+            <a class="agenda__link" href="formaciones/masterclass-objetivos-2027.html">Ver formación<span class="sr-only">: Masterclass «Objetivos 2027», 16 de diciembre</span></a>
+          </li>
+        </ol>
+        <p class="agenda__empty" id="agenda-vacia" hidden>Ahora mismo no hay formaciones programadas.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__bottom">
+      <p>© 2026 Itxaso Gurrea. Todos los derechos reservados.</p>
+      <nav class="footer__legal" aria-label="Más información">
+        <a href="preguntas-frecuentes.html" class="footer__legal-link">Preguntas frecuentes</a>
+        <a href="condiciones-contratacion.html" class="footer__legal-link">Condiciones de contratación</a>
+        <a href="politica-privacidad.html" class="footer__legal-link">Política de privacidad</a>
+        <a href="aviso-legal.html" class="footer__legal-link">Aviso legal</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="data/formaciones.js?v=20261117p"></script>
+  <script src="calendario.js?v=20261117p"></script>
+  <script src="chat.js?v=20261117p" defer></script>
+</body>
+</html>
