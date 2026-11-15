@@ -1478,3 +1478,78 @@ body.chat-open .to-top { opacity: 0; visibility: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .cal__link, .cal__arrow, .subnav a { transition: none; }
 }
+
+/* =========================================================
+   Página "Entrevista gratuita" (pensada primero para móvil)
+   ========================================================= */
+.entrevista { max-width: 760px; }
+.legal-page .entrevista .section__title { margin-bottom: 1.6rem; }
+.legal-page .entrevista__intro { margin: 0 0 0.6rem; font-size: 1.08rem; line-height: 1.65; color: var(--ink-soft); }
+
+.legal-page .entrevista__list { list-style: none; padding: 0; margin: 1.4rem 0 2.4rem; border-top: 1px solid var(--ink); }
+.legal-page .entrevista__list li { margin: 0; padding: 1.1rem 0; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+
+.legal-page .entrevista__highlight {
+  margin: 0 0 1rem;
+  padding: 0.2rem 0 0.2rem 1.2rem;
+  border-left: 2px solid var(--brand);
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 4.5vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.legal-page .entrevista__steps { list-style: none; counter-reset: paso; padding: 0; margin: 1.4rem 0 2.4rem; border-top: 1px solid var(--ink); }
+.legal-page .entrevista__steps li {
+  counter-increment: paso;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  margin: 0;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+.entrevista__steps li::before {
+  content: counter(paso, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--brand);
+}
+
+.entrevista__phone {
+  margin: 0 0 2.6rem;
+  padding: 1.2rem 1.2rem 1.3rem;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--ink);
+}
+.legal-page .entrevista__phone p { margin: 0; color: var(--ink-soft); }
+
+.entrevista__cta .btn { width: 100%; min-height: 48px; }
+.legal-page .entrevista__legal { margin: 0.9rem 0 0; font-size: 0.82rem; color: var(--muted); }
+.legal-page .entrevista__legal a { color: var(--ink); text-underline-offset: 3px; }
+
+.entrevista a:focus-visible,
+.hero__actions .btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@media (min-width: 600px) {
+  .entrevista__cta .btn { width: auto; }
+  .legal-page .entrevista__steps li { grid-template-columns: 4rem 1fr; }
+  .entrevista__steps li::before { font-size: 2.6rem; }
+  .entrevista__phone { padding: 1.4rem 1.6rem 1.5rem; }
+}
+
+/* Portada: si los dos botones no caben en una línea, uno debajo del otro a ancho completo */
+.hero__actions { container-type: inline-size; }
+@container (max-width: 570px) {
+  .hero__actions .btn { width: 100%; }
+}
