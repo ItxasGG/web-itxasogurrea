@@ -186,8 +186,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="img/logo.svg?v=20261117u">
-  <link rel="stylesheet" href="style.css?v=20261117u">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg?v=20261117v">
+  <link rel="stylesheet" href="style.css?v=20261117v">
 </head>
 <body>
 
@@ -503,62 +503,83 @@
       </div>
     </section>
 
-    <!-- ============ TESTIMONIOS ============ -->
-    <section class="section section--light" id="testimonios">
+    <!-- ============ TESTIMONIOS (carrusel) ============ -->
+    <section class="section section--light" id="testimonios" aria-label="Testimonios de clientes">
       <div class="container">
         <div class="section__head center reveal">
           <p class="eyebrow">Testimonios</p>
           <h2 class="section__title">El impacto real de trabajar juntos: historias de cambio.</h2>
+          <div class="tcar__controls" hidden>
+            <p class="tcar__count" aria-live="polite" aria-atomic="true"><span class="sr-only">Testimonio </span><span data-tcar-actual>1</span><span aria-hidden="true"> / </span><span class="sr-only"> de </span><span data-tcar-total>8</span></p>
+            <button type="button" class="cal__arrow tcar__arrow" data-tcar-anterior aria-label="Testimonio anterior" aria-controls="tcar-lista"><span aria-hidden="true">←</span></button>
+            <button type="button" class="cal__arrow tcar__arrow" data-tcar-siguiente aria-label="Testimonio siguiente" aria-controls="tcar-lista"><span aria-hidden="true">→</span></button>
+          </div>
         </div>
 
-        <div class="testimonials">
-          <figure class="testimonial reveal">
-            <img class="testimonial__photo" src="img/testimonios/gorka-barrutabena.jpg" alt="Gorka Barrutabeña" width="240" height="240" loading="lazy">
-            <blockquote>"Mi colaboración con Itxaso estos últimos años en liderazgo ha sido fundamental para gestionar el estrés, mejorar el trabajo en equipo y fortalecer mi autoestima, lo que ha contribuido significativamente en la mejora de los resultados de nuestra empresa."</blockquote>
-            <figcaption><strong>Gorka Barrutabeña</strong><span>CEO agencia Sorland</span></figcaption>
-          </figure>
-
-          <figure class="testimonial reveal">
-            <img class="testimonial__photo" src="img/testimonios/gorka-alkorta.jpg" alt="Gorka Alkorta" width="178" height="178" loading="lazy">
-            <blockquote>"Trabajar con Itxaso el liderazgo durante los últimos 10 años me ha supuesto un antes y un después en mi vida personal y profesional. Gracias a ella hoy soy un mejor profesional y un líder más sólido."</blockquote>
-            <figcaption><strong>Gorka Alkorta</strong><span>Gerente Occident</span></figcaption>
-          </figure>
-
-          <figure class="testimonial reveal">
-            <img class="testimonial__photo" src="img/testimonios/sury-saray.jpg" alt="Sury Saray" width="240" height="240" loading="lazy">
-            <blockquote>"Itxaso, gracias por enseñarme a liderar desde la autenticidad. Me ayudas a sostener mi visión con propósito, a mirar con otros ojos los momentos críticos y a soltar el perfeccionismo. Contigo aprendí que incluso los pasos en falso también forman parte del camino… del camino hacia la líder en la que estoy destinada a convertirme."</blockquote>
-            <figcaption><strong>Sury Saray</strong><span>Empresaria SSAB, Mallorca</span></figcaption>
-          </figure>
-
-          <figure class="testimonial reveal">
-            <img class="testimonial__photo" src="img/testimonios/veronica-de-castro.jpg" alt="Verónica de Castro" width="240" height="240" loading="lazy">
-            <blockquote>"Darte las gracias, Itxaso, de verdad. En estos años me has ayudado muchísimo, no solo a mejorar, sino a creer en mí. Siempre estuviste ahí, empujándome a dar lo mejor, y eso lo valoro un montón. Estoy muy agradecida por todo lo que has hecho por mí."</blockquote>
-            <figcaption><strong>Verónica de Castro</strong><span>Propietaria y co-directora de Krabi</span></figcaption>
-          </figure>
-
-          <figure class="testimonial reveal">
-            <img class="testimonial__photo" src="img/testimonios/dalila-alcoba.jpg" alt="Dalila Alcoba" width="240" height="240" loading="lazy">
-            <blockquote>"Darte las gracias, Itxaso, por ayudarme a desarrollar habilidades para gestionar mis emociones (que para mí es fundamental) y la capacidad de liderar al equipo. Este camino ayuda a conocerse a uno mismo y cuidarse. Yo estoy aprendiendo mucho y, como tú dices, esto es un continuo aprendizaje. Gracias y mil gracias."</blockquote>
-            <figcaption><strong>Dalila Alcoba</strong><span>Propietaria y co-directora de Krabi</span></figcaption>
-          </figure>
-
-          <figure class="testimonial reveal">
-            <img class="testimonial__photo" src="img/testimonios/francois-y-cristina.jpg" alt="François y Cristina" width="240" height="240" loading="lazy">
-            <blockquote>"Itxaso nos ha dado las herramientas para ser auténticos y trabajar en nuestro jardín interior. El trabajo realizado con Itxaso nos garantiza una buena salud emocional y coherencia para nuestro concepto. Esto nos vuelve muy competitivos en un mercado tan cambiante."</blockquote>
-            <figcaption><strong>François y Cristina</strong><span>Propietarios Versatil, Alicante</span></figcaption>
-          </figure>
-
-          <figure class="testimonial reveal">
-            <img class="testimonial__photo" src="img/testimonios/silvia-matheu.jpg" alt="Silvia Matheu" width="240" height="240" loading="lazy">
-            <blockquote>"Gracias al trabajo con Itxaso he entendido que no basta con tener formación técnica: la gestión emocional marca la diferencia. He aprendido a enfocar mi energía, ganar autoestima y centrarme, y eso ha hecho que los resultados de mi negocio se multipliquen."</blockquote>
-            <figcaption><strong>Silvia Matheu</strong><span>Directora SM Beauty Manacor</span></figcaption>
-          </figure>
-
-          <figure class="testimonial reveal">
-            <img class="testimonial__photo" src="img/testimonios/marian-dura.jpg" alt="Marian Durá" width="240" height="240" loading="lazy">
-            <blockquote>"El curso con Itxaso ha sido una experiencia transformadora. Han sido unos días de aprender a trabajar la autoestima, el perfeccionismo, los fracasos y a reconocer creencias limitantes, y un largo etcétera. Gracias a Itxaso por transmitir con tanta claridad y cercanía herramientas tan valiosas para crecer tanto a nivel personal como en la relación con los demás. ¡Lo recomiendo al 100 %!"</blockquote>
-            <figcaption><strong>Marian Durá</strong><span>Propietaria peluquería MD</span></figcaption>
-          </figure>
+        <!-- ===== Lista de testimonios: es el único sitio donde se añaden.
+             Para añadir uno nuevo, copia un bloque <li class="tcar__item"> completo y cambia
+             la foto (img/testimonios/…, 240 x 240), el nombre en alt, la cita, el nombre y el cargo.
+             Cambia también el número del id de la cita (tcar-cita-N) por uno que no se repita.
+             El carrusel, las flechas, el contador y «Leer testimonio completo» se ajustan solos. ===== -->
+        <div class="tcar reveal">
+          <ul class="tcar__track" id="tcar-lista" tabindex="0" aria-label="Testimonios de clientes. Usa las flechas izquierda y derecha para desplazarte.">
+            <li class="tcar__item">
+              <figure class="testimonial">
+                <img class="testimonial__photo" src="img/testimonios/gorka-barrutabena.jpg" alt="Gorka Barrutabeña" width="240" height="240" loading="lazy">
+                <blockquote id="tcar-cita-1">"Mi colaboración con Itxaso estos últimos años en liderazgo ha sido fundamental para gestionar el estrés, mejorar el trabajo en equipo y fortalecer mi autoestima, lo que ha contribuido significativamente en la mejora de los resultados de nuestra empresa."</blockquote>
+                <figcaption><strong>Gorka Barrutabeña</strong><span>CEO agencia Sorland</span></figcaption>
+              </figure>
+            </li>
+            <li class="tcar__item">
+              <figure class="testimonial">
+                <img class="testimonial__photo" src="img/testimonios/gorka-alkorta.jpg" alt="Gorka Alkorta" width="178" height="178" loading="lazy">
+                <blockquote id="tcar-cita-2">"Trabajar con Itxaso el liderazgo durante los últimos 10 años me ha supuesto un antes y un después en mi vida personal y profesional. Gracias a ella hoy soy un mejor profesional y un líder más sólido."</blockquote>
+                <figcaption><strong>Gorka Alkorta</strong><span>Gerente Occident</span></figcaption>
+              </figure>
+            </li>
+            <li class="tcar__item">
+              <figure class="testimonial">
+                <img class="testimonial__photo" src="img/testimonios/sury-saray.jpg" alt="Sury Saray" width="240" height="240" loading="lazy">
+                <blockquote id="tcar-cita-3">"Itxaso, gracias por enseñarme a liderar desde la autenticidad. Me ayudas a sostener mi visión con propósito, a mirar con otros ojos los momentos críticos y a soltar el perfeccionismo. Contigo aprendí que incluso los pasos en falso también forman parte del camino… del camino hacia la líder en la que estoy destinada a convertirme."</blockquote>
+                <figcaption><strong>Sury Saray</strong><span>Empresaria SSAB, Mallorca</span></figcaption>
+              </figure>
+            </li>
+            <li class="tcar__item">
+              <figure class="testimonial">
+                <img class="testimonial__photo" src="img/testimonios/veronica-de-castro.jpg" alt="Verónica de Castro" width="240" height="240" loading="lazy">
+                <blockquote id="tcar-cita-4">"Darte las gracias, Itxaso, de verdad. En estos años me has ayudado muchísimo, no solo a mejorar, sino a creer en mí. Siempre estuviste ahí, empujándome a dar lo mejor, y eso lo valoro un montón. Estoy muy agradecida por todo lo que has hecho por mí."</blockquote>
+                <figcaption><strong>Verónica de Castro</strong><span>Propietaria y co-directora de Krabi</span></figcaption>
+              </figure>
+            </li>
+            <li class="tcar__item">
+              <figure class="testimonial">
+                <img class="testimonial__photo" src="img/testimonios/dalila-alcoba.jpg" alt="Dalila Alcoba" width="240" height="240" loading="lazy">
+                <blockquote id="tcar-cita-5">"Darte las gracias, Itxaso, por ayudarme a desarrollar habilidades para gestionar mis emociones (que para mí es fundamental) y la capacidad de liderar al equipo. Este camino ayuda a conocerse a uno mismo y cuidarse. Yo estoy aprendiendo mucho y, como tú dices, esto es un continuo aprendizaje. Gracias y mil gracias."</blockquote>
+                <figcaption><strong>Dalila Alcoba</strong><span>Propietaria y co-directora de Krabi</span></figcaption>
+              </figure>
+            </li>
+            <li class="tcar__item">
+              <figure class="testimonial">
+                <img class="testimonial__photo" src="img/testimonios/francois-y-cristina.jpg" alt="François y Cristina" width="240" height="240" loading="lazy">
+                <blockquote id="tcar-cita-6">"Itxaso nos ha dado las herramientas para ser auténticos y trabajar en nuestro jardín interior. El trabajo realizado con Itxaso nos garantiza una buena salud emocional y coherencia para nuestro concepto. Esto nos vuelve muy competitivos en un mercado tan cambiante."</blockquote>
+                <figcaption><strong>François y Cristina</strong><span>Propietarios Versatil, Alicante</span></figcaption>
+              </figure>
+            </li>
+            <li class="tcar__item">
+              <figure class="testimonial">
+                <img class="testimonial__photo" src="img/testimonios/silvia-matheu.jpg" alt="Silvia Matheu" width="240" height="240" loading="lazy">
+                <blockquote id="tcar-cita-7">"Gracias al trabajo con Itxaso he entendido que no basta con tener formación técnica: la gestión emocional marca la diferencia. He aprendido a enfocar mi energía, ganar autoestima y centrarme, y eso ha hecho que los resultados de mi negocio se multipliquen."</blockquote>
+                <figcaption><strong>Silvia Matheu</strong><span>Directora SM Beauty Manacor</span></figcaption>
+              </figure>
+            </li>
+            <li class="tcar__item">
+              <figure class="testimonial">
+                <img class="testimonial__photo" src="img/testimonios/marian-dura.jpg" alt="Marian Durá" width="240" height="240" loading="lazy">
+                <blockquote id="tcar-cita-8">"El curso con Itxaso ha sido una experiencia transformadora. Han sido unos días de aprender a trabajar la autoestima, el perfeccionismo, los fracasos y a reconocer creencias limitantes, y un largo etcétera. Gracias a Itxaso por transmitir con tanta claridad y cercanía herramientas tan valiosas para crecer tanto a nivel personal como en la relación con los demás. ¡Lo recomiendo al 100 %!"</blockquote>
+                <figcaption><strong>Marian Durá</strong><span>Propietaria peluquería MD</span></figcaption>
+              </figure>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -691,7 +712,8 @@
 
   <a href="#inicio" class="to-top" id="toTop" aria-label="Volver arriba">↑</a>
 
-  <script src="script.js?v=20261117u"></script>
-  <script src="chat.js?v=20261117u" defer></script>
+  <script src="script.js?v=20261117v"></script>
+  <script src="carrusel.js?v=20261117v" defer></script>
+  <script src="chat.js?v=20261117v" defer></script>
 </body>
 </html>
