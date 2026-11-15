@@ -1146,6 +1146,9 @@ body.chat-open .to-top { opacity: 0; visibility: hidden; }
 .subnav a:not(.btn):hover { color: var(--ink); }
 .subnav .nav__cta { margin-top: 0; }
 
+/* Botón "Calendario" en la cabecera de la sección Servicios */
+.section__head > .btn { justify-self: start; padding: 1rem 1.4rem; }
+
 /* Portada: con "Calendario" el menú necesita un poco menos de espacio entre enlaces
    en los anchos justo anteriores al menú de móvil */
 @media (min-width: 1025px) {
