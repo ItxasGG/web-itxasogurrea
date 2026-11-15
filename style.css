@@ -491,7 +491,14 @@ strong { font-weight: 600; color: var(--ink); }
 }
 
 /* ---------- Testimonios ---------- */
-.testimonials { columns: 3 300px; column-gap: 3rem; }
+/* Cuadrícula: cada fila empieza en la misma línea; el espacio sobrante queda debajo */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 3rem;
+  align-items: start;
+}
+.testimonials > .testimonial { margin: 0; }
 .testimonial {
   break-inside: avoid;
   position: relative;
