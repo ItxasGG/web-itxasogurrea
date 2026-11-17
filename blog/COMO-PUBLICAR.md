@@ -19,6 +19,7 @@
    - `> frase` para una cita destacada.
    - `**negrita**`, `*cursiva*` y `[texto](https://enlace)`.
    - `![descripción](images/foto.jpg)` para una imagen dentro del texto.
+   - `[Botón: texto del botón](https://enlace)` en una línea sola para un botón verde.
 
 3. **Generar las páginas.** En la carpeta de la web ejecuta:
 

@@ -36,7 +36,7 @@ POR_PAGINA = 9
 CALENDLY = "https://calendly.com/itxasogurrea/entrevista"
 AUTORA = "Itxaso Gurrea"
 AUTORA_ID = DOMINIO + "/#itxaso-gurrea"
-AUTORA_FOTO = "itxaso-autora.webp"   # en blog/images
+AUTORA_FOTO = "itxaso-autora-v2.webp"   # en blog/images
 AUTORA_BIO = ("Coach ejecutiva y de vida, escritora, formadora y conferenciante. "
               "30 años acompañando a personas y equipos, online desde Bilbao.")
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -193,11 +193,15 @@ def src_y_srcset(versiones, prefijo):
 # ---------------------------------------------------------------------------
 # Markdown (lo básico: títulos, párrafos, listas, citas, negritas, enlaces, imágenes)
 # ---------------------------------------------------------------------------
+def externo(url):
+    return url.startswith("http") and "itxasogurrea.com" not in url
+
+
 def en_linea(texto):
     t = e(texto)
     t = re.sub(r"\[([^\[\]]+)\]\(([^)\s]+)\)",
                lambda m: '<a href="%s"%s>%s</a>' % (
-                   m.group(2), ' target="_blank" rel="noopener"' if m.group(2).startswith("http") else "", m.group(1)), t)
+                   m.group(2), ' target="_blank" rel="noopener"' if externo(m.group(2)) else "", m.group(1)), t)
     t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
     t = re.sub(r"(?<![\w*])\*(?!\s)([^*]+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", t)
     return t
@@ -253,6 +257,15 @@ def markdown(texto, prefijo_img):
         if m_img:
             cerrar_todo()
             out.append(imagen_md(m_img.group(1), m_img.group(2), m_img.group(3), prefijo_img))
+            continue
+        m_btn = re.match(r"^\[(?:Botón|Boton|botón|boton):\s*([^\]]+)\]\(([^)\s]+)\)$", s)
+        if m_btn:
+            cerrar_todo()
+            url = m_btn.group(2)
+            nueva = ' target="_blank" rel="noopener"' if externo(url) else ""
+            aviso = '<span class="sr-only"> (se abre en una pestaña nueva)</span>' if nueva else ""
+            out.append('<p class="post__button"><a class="btn btn--primary" href="%s"%s>%s%s</a></p>'
+                       % (e(url), nueva, e(m_btn.group(1).strip()), aviso))
             continue
         m_h = re.match(r"^(#{1,4})\s+(.*)$", s)
         if m_h:
@@ -644,7 +657,7 @@ def articulo(p, todos, v):
           </aside>
 
           <div class="post__cta">
-            <a class="btn btn--primary" href="{calendly}" target="_blank" rel="noopener">Reservar entrevista gratuita<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+            <a class="btn btn--primary" href="../entrevista-gratuita.html">Reservar entrevista gratuita</a>
           </div>
         </footer>
       </article>

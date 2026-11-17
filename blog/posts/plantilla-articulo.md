@@ -33,3 +33,5 @@ borrador: si
 ![PENDIENTE: descripción de la imagen para quien no puede verla](images/plantilla-imagen-destacada.png "[PENDIENTE: pie de foto opcional]")
 
 [PENDIENTE: párrafo final.]
+
+[Botón: Pide tu entrevista gratuita](https://www.itxasogurrea.com/entrevista-gratuita)

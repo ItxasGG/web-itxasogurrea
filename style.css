@@ -1908,3 +1908,6 @@ body.chat-open .to-top { opacity: 0; visibility: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .bcard, .bcard:hover { transition: none; transform: none; }
 }
+.post__button { margin: 1.6rem 0 2rem; }
+.post__button .btn { min-height: 48px; }
+@media (max-width: 599px) { .post__button .btn { width: 100%; } }
