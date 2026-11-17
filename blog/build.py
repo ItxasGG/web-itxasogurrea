@@ -135,7 +135,7 @@ window.addEventListener("load", function () {
     return True
 
 
-def imagen_web(relativa, anchos=(640, 1200)):
+def imagen_web(relativa, anchos=(640, 1200, 1600)):
     """
     A partir de una imagen de blog/images devuelve {ancho: (ruta relativa a blog/, w, h)}.
     Genera las versiones WebP si no existen o si la original es más nueva.
@@ -181,7 +181,12 @@ def imagen_redes(relativa):
 def src_y_srcset(versiones, prefijo):
     claves = sorted(versiones)
     grande = versiones[claves[-1]]
-    srcset = ", ".join("%s%s %dw" % (prefijo, versiones[k][0], versiones[k][1]) for k in claves)
+    vistos, partes = set(), []
+    for k in claves:   # sin anchos repetidos (si la original es más pequeña que 1600 px)
+        if versiones[k][1] not in vistos:
+            vistos.add(versiones[k][1])
+            partes.append("%s%s %dw" % (prefijo, versiones[k][0], versiones[k][1]))
+    srcset = ", ".join(partes)
     return prefijo + grande[0], srcset, grande[1], grande[2]
 
 
