@@ -2,5 +2,8 @@
 # Se permite el acceso a todos los buscadores y asistentes de IA.
 User-agent: *
 Allow: /
+# Archivos de trabajo del blog (los artículos publicados están en /blog/...)
+Disallow: /blog/posts/
+Disallow: /blog/build.py
 
 Sitemap: https://www.itxasogurrea.com/sitemap.xml
