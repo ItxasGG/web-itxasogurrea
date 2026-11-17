@@ -63,8 +63,13 @@
   <!-- BLOG:INICIO (lo genera blog/build.py, no editar a mano) -->
   <url>
     <loc>https://www.itxasogurrea.com/blog</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.itxasogurrea.com/blog/cualidades-lider-siglo-xxi</loc>
+    <lastmod>2026-10-23</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.itxasogurrea.com/blog/autoestima-cimiento-invisible</loc>
