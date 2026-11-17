@@ -89,7 +89,7 @@ En coaching usamos el método SMART para dar forma a los objetivos. Yo le añado
 - **Temporal:** con una fecha o unos plazos claros.
 - **Hiperconectado:** vivimos en una sociedad hiperconectada.
 
-### La A también es de afirmativo
+### La «A» también es de afirmativo
 
 Nuestra mente se enfoca en aquello que nombramos. Si te dices “no quiero estresarme tanto”, tu mente se queda pensando en el estrés. Por eso es mejor que el objetivo diga lo que quieres de verdad y no lo que quieres evitar.
 
@@ -101,13 +101,13 @@ Por ejemplo:
 - **Conectas con él:** ¿qué me está diciendo? Que necesito descansar más y poner límites a mi agenda.
 - **Lo conviertes en afirmativo:** “quiero llegar a los viernes con energía, para eso voy a dejar libre una hora al día sin reuniones”.
 
-### La R también es de retador
+### La «R» también es de retador
 
 Un objetivo tiene que ser relevante para ti, pero también tiene que retarte. Si no tiene un componente de reto, no es un objetivo: es una tarea.
 
 Apuntarte a un curso que ya sabes hacer es una tarea. Atreverte a dar una formación a tu equipo por primera vez es un objetivo. El reto es lo que te hace crecer, te saca de la rutina y le da sentido al esfuerzo. Eso sí: tiene que ser un reto alcanzable, que te estimule y no te bloquee.
 
-### La H: objetivos en un mundo hiperconectado
+### La «H»: objetivos en un mundo hiperconectado
 
 Vivimos en una sociedad hiperconectada. El móvil, las redes sociales, internet, las noticias, los mensajes y todo lo que oímos a lo largo del día nos llenan de información. Recibimos mucho más de lo que podemos procesar.
 
