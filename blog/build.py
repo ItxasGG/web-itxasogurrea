@@ -193,6 +193,19 @@ def src_y_srcset(versiones, prefijo):
 # ---------------------------------------------------------------------------
 # Markdown (lo básico: títulos, párrafos, listas, citas, negritas, enlaces, imágenes)
 # ---------------------------------------------------------------------------
+def enlace_propio(url):
+    """Convierte un enlace de la propia web en uno relativo desde blog/ (para que funcione también en local)."""
+    if url.startswith(DOMINIO + "/"):
+        ruta = url[len(DOMINIO) + 1:]
+        if not ruta:
+            return "../index.html"
+        if "#" in ruta:
+            ruta, ancla = ruta.split("#", 1)
+            return ("../" + (ruta + ".html" if ruta and not ruta.endswith(".html") else ruta or "index.html")) + "#" + ancla
+        return "../" + (ruta if ruta.endswith(".html") else ruta + ".html")
+    return url
+
+
 def externo(url):
     return url.startswith("http") and "itxasogurrea.com" not in url
 
@@ -675,7 +688,7 @@ def articulo(p, todos, v):
           </aside>
 
           <div class="post__cta">
-            <a class="btn btn--primary" href="../entrevista-gratuita.html">Reservar entrevista gratuita</a>
+            <a class="btn btn--primary" href="{cta_url}">{cta_texto}</a>
           </div>
         </footer>
       </article>
@@ -693,7 +706,9 @@ def articulo(p, todos, v):
            fecha=fecha_larga(p["_fecha"]), mod=modificado, src=e(img_src), srcset=e(srcset), w=w, h=h,
            alt=e(p["imagen_alt"]), cuerpo=cuerpo, url_q=urllib.parse.quote(url, safe=""), wa=texto_compartir,
            in_=ICONO_LINKEDIN, wa_ico=ICONO_WHATSAPP, link=ICONO_ENLACE, url=e(url), bio=e(AUTORA_BIO),
-           calendly=CALENDLY, lateral=lateral, redes=redes_sociales, navegacion=navegacion)
+           calendly=CALENDLY, lateral=lateral, redes=redes_sociales, navegacion=navegacion,
+           cta_url=e(enlace_propio(p.get("boton_final_enlace") or "../entrevista-gratuita.html")),
+           cta_texto=e(p.get("boton_final_texto") or "Reservar entrevista gratuita"))
     doc += pie(r, v, scripts='  <script src="../blog.js?v=%s" defer></script>\n' % v)
     with open(os.path.join(BLOG, p["slug"] + ".html"), "w", encoding="utf-8") as f:
         f.write(doc)

@@ -11,6 +11,7 @@
    - `imagen_alt`: qué se ve en la imagen, para quien no puede verla.
    - `titulo_seo` y `descripcion_seo`: lo que aparecerá en Google.
    - `borrador`: `si` mientras no quieras publicarlo; `no` para publicarlo.
+   - Opcional: `boton_final_texto` y `boton_final_enlace` para cambiar el botón verde del final del artículo (si no se ponen, es «Reservar entrevista gratuita» hacia /entrevista-gratuita).
 
    Debajo de la segunda línea `---` escribe el artículo:
    - Párrafos separados por una línea en blanco.
