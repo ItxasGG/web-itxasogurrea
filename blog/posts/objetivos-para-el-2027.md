@@ -155,4 +155,4 @@ Por lo tanto...
 
 [Botón: Masterclass gratuita «Objetivos 2027»](https://www.itxasogurrea.com/formaciones/masterclass-objetivos-2027)
 
-Si quieres saber más sobre este tema, puedes reservar tu entrevista gratuita con Itxaso Gurrea clicando el botón de abajo.
+Si quieres saber más sobre este tema, puedes reservar tu plaza en la masterclass gratuita «Objetivos 2027» con Itxaso Gurrea clicando el botón de abajo.
