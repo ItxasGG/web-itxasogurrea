@@ -1911,3 +1911,64 @@ body.chat-open .to-top { opacity: 0; visibility: hidden; }
 .post__button { margin: 1.6rem 0 2rem; }
 .post__button .btn { min-height: 48px; }
 @media (max-width: 599px) { .post__button .btn { width: 100%; } }
+
+/* =========================================================
+   Textos justificados (párrafos, listas y testimonios)
+   Los títulos, etiquetas, botones, fechas y frases grandes
+   destacadas se mantienen alineados a la izquierda.
+   ========================================================= */
+main p,
+main li,
+main blockquote {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+/* Textos centrados: justificados con la última línea centrada */
+.blog-head__intro { text-align-last: center; }
+/* Elementos que no se justifican */
+main .eyebrow,
+main .title-sub,
+main .hero__tagline,
+main .tags li,
+main .stat__label,
+main .service-stat__label,
+main .card__subtitle,
+main .bcard__date,
+main .post__meta,
+main .post__share-label,
+main .post-nav__label,
+main .legal-meta,
+main .formacion__meta,
+main .formacion__dates li,
+main .cal__note,
+main .cal__panel-title,
+main .cal__panel-time,
+main .tcar__count,
+main .agenda__date,
+main .agenda__meta,
+main .post__copied,
+main .entrevista__legal,
+main .about__quote,
+main .big-quote,
+main .service-closing,
+main .services-closing,
+main .book-closing,
+main .bio-closing,
+main .post__quote,
+main .post__quote p,
+main .entrevista__highlight,
+main .service-lead,
+main .brand-eye__lead,
+main .contact-info li,
+main .form-card p,
+main .faq-empty,
+main li h2,
+main li h3,
+main li h4,
+main li figcaption,
+main li .bcard__more {
+  text-align: left;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
