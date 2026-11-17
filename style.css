@@ -1972,3 +1972,8 @@ main li .bcard__more {
   -webkit-hyphens: manual;
   hyphens: manual;
 }
+
+/* «El premio de la conciencia es la libertad»: centrado, en verde y entre corchetes */
+main .big-quote, .big-quote { text-align: center; color: var(--brand); }
+.big-quote::before { content: "[ "; }
+.big-quote::after { content: " ]"; }
