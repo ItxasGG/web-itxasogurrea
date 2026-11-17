@@ -225,6 +225,7 @@ def imagen_md(alt, src, pie, prefijo):
 
 def markdown(texto, prefijo_img):
     lineas = texto.replace("\r\n", "\n").split("\n")
+    n_consent = [0]
     out, parrafo, lista, tipo_lista, cita = [], [], [], None, []
 
     def cerrar_parrafo():
@@ -257,6 +258,23 @@ def markdown(texto, prefijo_img):
         if m_img:
             cerrar_todo()
             out.append(imagen_md(m_img.group(1), m_img.group(2), m_img.group(3), prefijo_img))
+            continue
+        m_priv = re.match(r"^\[(?:Botón|Boton|botón|boton) con privacidad:\s*([^\]]+)\]\(([^)\s]+)\)$", s)
+        if m_priv:
+            cerrar_todo()
+            n_consent[0] += 1
+            ident = "consentimiento-%d" % n_consent[0]
+            url = m_priv.group(2)
+            nueva = ' target="_blank" rel="noopener"' if externo(url) else ""
+            aviso = '<span class="sr-only"> (se abre en una pestaña nueva)</span>' if nueva else ""
+            out.append(
+                '<div class="post__consent-cta" data-consentimiento>'
+                '<p class="post__button"><a class="btn btn--primary" href="%s"%s data-requiere="%s">%s%s</a></p>'
+                '<p class="post__consent"><input type="checkbox" id="%s"> '
+                '<label for="%s">He leído y acepto la <a href="../politica-privacidad.html">política de privacidad</a> '
+                'y doy mi consentimiento para el tratamiento de mis datos.</label></p>'
+                '<p class="post__consent-msg" role="status" aria-live="polite"></p>'
+                '</div>' % (e(url), nueva, ident, e(m_priv.group(1).strip()), aviso, ident, ident))
             continue
         m_btn = re.match(r"^\[(?:Botón|Boton|botón|boton):\s*([^\]]+)\]\(([^)\s]+)\)$", s)
         if m_btn:

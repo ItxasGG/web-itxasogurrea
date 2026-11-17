@@ -37,3 +37,26 @@
     });
   });
 })();
+
+/* Botones que necesitan aceptar la política de privacidad antes de abrirse */
+(function () {
+  "use strict";
+  document.querySelectorAll("[data-consentimiento]").forEach(function (caja) {
+    var boton = caja.querySelector("[data-requiere]");
+    var casilla = document.getElementById(boton.getAttribute("data-requiere"));
+    var aviso = caja.querySelector(".post__consent-msg");
+    var actualizar = function () {
+      boton.setAttribute("aria-disabled", casilla.checked ? "false" : "true");
+      if (casilla.checked) aviso.textContent = "";
+    };
+    boton.addEventListener("click", function (e) {
+      if (!casilla.checked) {
+        e.preventDefault();
+        aviso.textContent = "Para continuar, marca la casilla y acepta la política de privacidad.";
+        casilla.focus();
+      }
+    });
+    casilla.addEventListener("change", actualizar);
+    actualizar();
+  });
+})();

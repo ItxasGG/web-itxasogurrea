@@ -1977,3 +1977,15 @@ main li .bcard__more {
 main .big-quote, .big-quote { text-align: center; color: var(--brand); }
 .big-quote::before { content: "[ "; }
 .big-quote::after { content: " ]"; }
+
+/* Botón del blog con aceptación de la política de privacidad */
+.post__consent-cta { margin: 1.6rem 0 2rem; }
+.post__consent-cta .post__button { margin: 0 0 1rem; }
+.post__consent-cta .btn[aria-disabled="true"] { opacity: 0.5; }
+.legal-page .post__consent { display: flex; align-items: flex-start; gap: 0.7rem; margin: 0; text-align: left; font-size: 0.9rem; line-height: 1.5; }
+.post__consent input[type="checkbox"] { flex: none; width: 20px; height: 20px; margin: 0.1rem 0 0; accent-color: var(--brand); cursor: pointer; }
+.post__consent label { cursor: pointer; }
+.post__consent input:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.legal-page .post__consent-msg { margin: 0.6rem 0 0; min-height: 1.2em; font-size: 0.88rem; color: #b3261e; text-align: left; }
+.legal-page .post__body .btn { text-decoration: none; color: var(--white); }
+.legal-page .post__body .btn:hover { color: var(--ink); }
