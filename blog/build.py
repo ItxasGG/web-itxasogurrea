@@ -449,7 +449,7 @@ def listado(posts, v):
             "@context": "https://schema.org",
             "@type": "Blog",
             "@id": DOMINIO + "/blog#blog",
-            "name": "Blog de reflexiones de Itxaso Gurrea",
+            "name": "Reflexiones · Blog de Itxaso Gurrea",
             "url": DOMINIO + "/blog",
             "inLanguage": "es",
             "author": {"@type": "Person", "@id": AUTORA_ID, "name": AUTORA},
@@ -476,8 +476,8 @@ def listado(posts, v):
     <div class="container">
       <header class="blog-head">
         <p class="eyebrow">Blog</p>
-        <h1 class="section__title blog-head__title">Blog de reflexiones de Itxaso Gurrea</h1>
-        <p class="blog-head__intro">[PENDIENTE: texto de introducción del blog]</p>
+        <h1 class="section__title blog-head__title">Reflexiones</h1>
+        <p class="blog-head__intro">Este es un espacio para detenernos a pensar. Aquí comparto reflexiones sobre lo que veo cada día en mi trabajo con las personas: el estrés que se confunde con compromiso, la autoestima que depende del rendimiento y los cambios que asustan aunque los deseemos. No encontrarás fórmulas rápidas, sino ideas para mirarte con más honestidad, comprender lo que te pasa y elegir cómo quieres vivir.</p>
       </header>
 """
         if trozo:
@@ -546,7 +546,7 @@ def articulo(p, todos, v):
         "image": {"@type": "ImageObject", "url": img_abs, "width": w, "height": h},
         "author": {"@type": "Person", "@id": AUTORA_ID, "name": AUTORA, "url": DOMINIO + "/"},
         "publisher": {"@type": "Person", "@id": AUTORA_ID, "name": AUTORA, "url": DOMINIO + "/"},
-        "isPartOf": {"@type": "Blog", "@id": DOMINIO + "/blog#blog", "name": "Blog de reflexiones de Itxaso Gurrea", "url": DOMINIO + "/blog"},
+        "isPartOf": {"@type": "Blog", "@id": DOMINIO + "/blog#blog", "name": "Reflexiones · Blog de Itxaso Gurrea", "url": DOMINIO + "/blog"},
     }
     extra = ('  <meta property="og:image:width" content="%d">\n  <meta property="og:image:height" content="%d">\n'
              '  <meta property="article:published_time" content="%s">\n  <meta property="article:modified_time" content="%s">\n'
