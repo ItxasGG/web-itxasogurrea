@@ -2012,6 +2012,7 @@ main .big-quote, .big-quote { text-align: center; color: var(--brand); }
 }
 .nl p, main .nl p { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
 .nl .nl__lead { margin: 0; max-width: 520px; font-size: 1rem; line-height: 1.6; color: var(--ink-soft); }
+.nl p.nl__lead, main .nl p.nl__lead { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 .nl__fields { display: grid; grid-template-columns: 1fr; }
 .nl .form-card label { margin-bottom: 1.2rem; }
 .nl .form-card input[type="text"], .nl .form-card input[type="email"] { min-height: 44px; }
