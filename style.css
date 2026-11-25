@@ -1929,6 +1929,8 @@ main blockquote {
   -webkit-hyphens: auto;
   hyphens: auto;
 }
+/* Párrafos justificados sin cortar palabras con guion */
+main p.sin-guiones { -webkit-hyphens: manual; hyphens: manual; }
 /* Textos centrados: justificados con la última línea centrada */
 .blog-head__intro { text-align-last: center; }
 /* Elementos que no se justifican */
