@@ -408,7 +408,7 @@ def bloque_newsletter(prefijo, r, variante="pie"):
     return """<section class="nl nl--{variante}" aria-labelledby="{p}-titulo" data-newsletter-caja>
   <div class="nl__text">
     <h2 class="nl__title" id="{p}-titulo">Recibe mis reflexiones en tu correo</h2>
-    <p class="nl__lead">Ideas para vivir y trabajar desde quien eres, no desde la exigencia. Sin spam, y puedes darte de baja cuando quieras.</p>
+    <p class="nl__lead">Ideas para vivir y trabajar desde quien eres, no desde la exigencia. Puedes darte de baja cuando quieras.</p>
   </div>
   <div class="nl__box">
     <noscript><p class="nl__noscript">Para suscribirte necesitas activar JavaScript en tu navegador.</p></noscript>
@@ -433,7 +433,6 @@ def bloque_newsletter(prefijo, r, variante="pie"):
       </div>
       <p class="nl__error nl__error--consent" id="{p}-consent-error" hidden></p>
       <button type="submit" class="btn btn--primary nl__button">Quiero suscribirme</button>
-      <p class="nl__legal">Responsable: Itxaso Gurrea. Finalidad: enviarte la newsletter. Legitimación: tu consentimiento. Destinatario: HubSpot, proveedor del envío de correos. Derechos: acceso, rectificación, supresión y otros, como se explica en la política de privacidad.</p>
     </form>
     <div class="nl__status" id="{p}-estado" role="status" aria-live="polite"></div>
   </div>
