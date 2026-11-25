@@ -1991,7 +1991,7 @@ main .big-quote, .big-quote { text-align: center; color: var(--brand); }
 .legal-page .post__body .btn:hover { color: var(--ink); }
 
 /* =========================================================
-   Newsletter «Recibe mis reflexiones en tu correo»
+   Newsletter «Newsletter»
    (pie de página y final de los artículos; pensado primero para móvil)
    ========================================================= */
 .nl { display: grid; gap: 1.6rem; color: var(--ink); }
@@ -2047,6 +2047,8 @@ main .big-quote, .big-quote { text-align: center; color: var(--brand); }
 }
 .nl__success:focus { outline: none; }
 .nl .nl__noscript { margin: 0; padding: 1rem 0; border-top: 1px solid var(--ink); color: var(--ink); }
+/* Portada: entre «Itxaso Gurrea» y «Por qué un ojo» */
+.nl--inicio { margin: 6rem 0 0; padding-top: 1.4rem; border-top: 1px solid var(--line); }
 .nl--articulo { margin-top: 2.6rem; padding: 1.6rem 1.4rem; background: var(--bg-alt); border-radius: 8px; }
 .nl--articulo .nl__success { background: var(--bg); }
 
@@ -2055,5 +2057,5 @@ main .big-quote, .big-quote { text-align: center; color: var(--brand); }
   .nl__button { width: auto; }
 }
 @media (min-width: 1025px) {
-  .nl--pie { grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .nl--pie, .nl--inicio { grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
 }

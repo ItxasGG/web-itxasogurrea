@@ -402,13 +402,13 @@ def cabecera(r, v, actual_blog=True):
 # Newsletter (componente común: pie de todas las páginas y final de los artículos)
 # ---------------------------------------------------------------------------
 def bloque_newsletter(prefijo, r, variante="pie"):
-    """Bloque «Recibe mis reflexiones en tu correo».
+    """Bloque «Newsletter».
     prefijo: distingue los id cuando hay dos bloques en la misma página (p. ej. «nl-pie», «nl-art»).
     r: ruta relativa hasta la raíz de la web («», «../» o «../../»)."""
     return """<section class="nl nl--{variante}" aria-labelledby="{p}-titulo" data-newsletter-caja>
   <div class="nl__text">
-    <h2 class="nl__title" id="{p}-titulo">Recibe mis reflexiones en tu correo</h2>
-    <p class="nl__lead">Ideas para vivir y trabajar desde quien eres, no desde la exigencia. Puedes darte de baja cuando quieras.</p>
+    <h2 class="nl__title" id="{p}-titulo">Newsletter</h2>
+    <p class="nl__lead">Encontrarás ejercicios prácticos para tu crecimiento personal, preguntas de autorreflexión para ayudarte a conectar mejor contigo, novedades sobre las formaciones de la academia en Skool y bibliografía relevante.</p>
   </div>
   <div class="nl__box">
     <noscript><p class="nl__noscript">Para suscribirte necesitas activar JavaScript en tu navegador.</p></noscript>

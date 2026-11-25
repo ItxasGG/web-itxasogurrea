@@ -187,7 +187,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="img/logo.svg?v=20261125a">
-  <link rel="stylesheet" href="style.css?v=20261125a">
+  <link rel="stylesheet" href="style.css?v=20261125b">
 </head>
 <body>
 
@@ -490,6 +490,40 @@
           </div>
         </div>
 
+        <!-- Newsletter (entre «Itxaso Gurrea» y «Por qué un ojo») -->
+        <section class="nl nl--inicio reveal" aria-labelledby="nl-inicio-titulo" data-newsletter-caja>
+          <div class="nl__text">
+            <h2 class="nl__title" id="nl-inicio-titulo">Newsletter</h2>
+            <p class="nl__lead">Encontrarás ejercicios prácticos para tu crecimiento personal, preguntas de autorreflexión para ayudarte a conectar mejor contigo, novedades sobre las formaciones de la academia en Skool y bibliografía relevante.</p>
+          </div>
+          <div class="nl__box">
+            <noscript><p class="nl__noscript">Para suscribirte necesitas activar JavaScript en tu navegador.</p></noscript>
+            <form class="form-card nl__form" data-newsletter data-estado="nl-inicio-estado" novalidate hidden>
+              <div class="nl__fields">
+                <label for="nl-inicio-nombre">Tu nombre
+                  <input type="text" id="nl-inicio-nombre" name="firstname" autocomplete="given-name" required aria-describedby="nl-inicio-nombre-error" data-error="nl-inicio-nombre-error" aria-invalid="false">
+                  <span class="nl__error" id="nl-inicio-nombre-error" hidden></span>
+                </label>
+                <label for="nl-inicio-email">Tu email
+                  <input type="email" id="nl-inicio-email" name="email" autocomplete="email" required aria-describedby="nl-inicio-email-error" data-error="nl-inicio-email-error" aria-invalid="false">
+                  <span class="nl__error" id="nl-inicio-email-error" hidden></span>
+                </label>
+              </div>
+              <div class="nl__hp" aria-hidden="true">
+                <label for="nl-inicio-website">No rellenes este campo</label>
+                <input type="text" id="nl-inicio-website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="form-consent nl__consent">
+                <input type="checkbox" id="nl-inicio-consent" name="consent" required aria-describedby="nl-inicio-consent-error" data-error="nl-inicio-consent-error" aria-invalid="false">
+                <label for="nl-inicio-consent">He leído y acepto la <a href="politica-privacidad.html">política de privacidad</a> y quiero recibir la newsletter de Itxaso Gurrea.</label>
+              </div>
+              <p class="nl__error nl__error--consent" id="nl-inicio-consent-error" hidden></p>
+              <button type="submit" class="btn btn--primary nl__button">Quiero suscribirme</button>
+            </form>
+            <div class="nl__status" id="nl-inicio-estado" role="status" aria-live="polite"></div>
+          </div>
+        </section>
+
         <div class="brand-eye reveal">
           <svg class="brand-eye__icon" role="img" aria-label="Logotipo de Itxaso Gurrea: un ojo"><use href="#logo-eye"/></svg>
           <div class="brand-eye__text">
@@ -670,40 +704,6 @@
 
   <!-- ============ PIE ============ -->
   <footer class="footer">
-    <div class="container">
-      <section class="nl nl--pie" aria-labelledby="nl-pie-titulo" data-newsletter-caja>
-        <div class="nl__text">
-          <h2 class="nl__title" id="nl-pie-titulo">Recibe mis reflexiones en tu correo</h2>
-          <p class="nl__lead">Ideas para vivir y trabajar desde quien eres, no desde la exigencia. Puedes darte de baja cuando quieras.</p>
-        </div>
-        <div class="nl__box">
-          <noscript><p class="nl__noscript">Para suscribirte necesitas activar JavaScript en tu navegador.</p></noscript>
-          <form class="form-card nl__form" data-newsletter data-estado="nl-pie-estado" novalidate hidden>
-            <div class="nl__fields">
-              <label for="nl-pie-nombre">Tu nombre
-                <input type="text" id="nl-pie-nombre" name="firstname" autocomplete="given-name" required aria-describedby="nl-pie-nombre-error" data-error="nl-pie-nombre-error" aria-invalid="false">
-                <span class="nl__error" id="nl-pie-nombre-error" hidden></span>
-              </label>
-              <label for="nl-pie-email">Tu email
-                <input type="email" id="nl-pie-email" name="email" autocomplete="email" required aria-describedby="nl-pie-email-error" data-error="nl-pie-email-error" aria-invalid="false">
-                <span class="nl__error" id="nl-pie-email-error" hidden></span>
-              </label>
-            </div>
-            <div class="nl__hp" aria-hidden="true">
-              <label for="nl-pie-website">No rellenes este campo</label>
-              <input type="text" id="nl-pie-website" name="website" tabindex="-1" autocomplete="off">
-            </div>
-            <div class="form-consent nl__consent">
-              <input type="checkbox" id="nl-pie-consent" name="consent" required aria-describedby="nl-pie-consent-error" data-error="nl-pie-consent-error" aria-invalid="false">
-              <label for="nl-pie-consent">He leído y acepto la <a href="politica-privacidad.html">política de privacidad</a> y quiero recibir la newsletter de Itxaso Gurrea.</label>
-            </div>
-            <p class="nl__error nl__error--consent" id="nl-pie-consent-error" hidden></p>
-            <button type="submit" class="btn btn--primary nl__button">Quiero suscribirme</button>
-          </form>
-          <div class="nl__status" id="nl-pie-estado" role="status" aria-live="polite"></div>
-        </div>
-      </section>
-    </div>
     <div class="container footer__inner">
       <div>
         <a href="#inicio" class="logo logo--light"><svg class="logo__icon" aria-hidden="true"><use href="#logo-eye"/></svg>Itxaso Gurrea</a>

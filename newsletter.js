@@ -1,6 +1,6 @@
 /* =========================================================
    Itxaso Gurrea · newsletter.js
-   Formulario «Recibe mis reflexiones en tu correo» (pie de página
+   Formulario «Newsletter» (pie de página
    y final de los artículos del blog). Envía los datos a HubSpot
    con la API pública de formularios (Forms API v3, «submit»).
    La configuración está en newsletter-config.js.
