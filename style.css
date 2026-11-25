@@ -2008,7 +2008,7 @@ main .big-quote, .big-quote { text-align: center; color: var(--brand); }
   line-height: 1.05;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: var(--brand); /* verde #5b8b4f */
 }
 .nl p, main .nl p { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
 .nl .nl__lead { margin: 0; max-width: 520px; font-size: 1rem; line-height: 1.6; color: var(--ink-soft); }

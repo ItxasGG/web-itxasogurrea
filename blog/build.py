@@ -407,7 +407,7 @@ def bloque_newsletter(prefijo, r, variante="pie"):
     r: ruta relativa hasta la raíz de la web («», «../» o «../../»)."""
     return """<section class="nl nl--{variante}" aria-labelledby="{p}-titulo" data-newsletter-caja>
   <div class="nl__text">
-    <h2 class="nl__title" id="{p}-titulo">Newsletter</h2>
+    <h2 class="nl__title" id="{p}-titulo">[Newsletter]</h2>
     <p class="nl__lead">Encontrarás ejercicios prácticos para tu crecimiento personal, preguntas de autorreflexión para ayudarte a conectar mejor contigo, novedades sobre las formaciones de la academia en Skool y bibliografía relevante.</p>
   </div>
   <div class="nl__box">
