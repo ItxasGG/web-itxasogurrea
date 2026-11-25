@@ -1,5 +1,5 @@
 /* =========================================================
-   Itxaso Gurrea · Coach Ejecutivo y de Vida
+   Itxaso Gurrea · Senior Coach Ejecutiva y de Vida
    Estilo: editorial minimalista. Blanco roto, negro, títulos
    grandes en mayúsculas, etiquetas [ ENTRE CORCHETES ], líneas
    finas y fotografía en blanco y negro.
@@ -1918,7 +1918,10 @@ body.chat-open .to-top { opacity: 0; visibility: hidden; }
 @media (max-width: 599px) { .post__button .btn { width: 100%; } }
 
 /* =========================================================
-   Textos justificados (párrafos, listas y testimonios)
+   REGLA DE LA WEB: textos justificados y sin palabras cortadas
+   Párrafos, listas y testimonios van justificados. Las palabras
+   nunca se parten con guion de una línea a otra: pasan enteras a
+   la línea siguiente y se ajustan los espacios entre palabras.
    Los títulos, etiquetas, botones, fechas y frases grandes
    destacadas se mantienen alineados a la izquierda.
    ========================================================= */
@@ -1926,11 +1929,9 @@ main p,
 main li,
 main blockquote {
   text-align: justify;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: manual;
+  hyphens: manual;
 }
-/* Párrafos justificados sin cortar palabras con guion */
-main p.sin-guiones { -webkit-hyphens: manual; hyphens: manual; }
 /* Textos centrados: justificados con la última línea centrada */
 .blog-head__intro { text-align-last: center; }
 /* Elementos que no se justifican */
@@ -2019,7 +2020,7 @@ main .big-quote, .big-quote { text-align: center; color: var(--brand); }
 }
 .nl p, main .nl p { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
 .nl .nl__lead { margin: 0; max-width: 520px; font-size: 1rem; line-height: 1.6; color: var(--ink-soft); }
-.nl p.nl__lead, main .nl p.nl__lead { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+.nl p.nl__lead, main .nl p.nl__lead { text-align: justify; }
 .nl__fields { display: grid; grid-template-columns: 1fr; }
 .nl .form-card label { margin-bottom: 1.2rem; }
 .nl .form-card input[type="text"], .nl .form-card input[type="email"] { min-height: 44px; }

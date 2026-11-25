@@ -37,7 +37,7 @@ CALENDLY = "https://calendly.com/itxasogurrea/entrevista"
 AUTORA = "Itxaso Gurrea"
 AUTORA_ID = DOMINIO + "/#itxaso-gurrea"
 AUTORA_FOTO = "itxaso-autora-v2.webp"   # en blog/images
-AUTORA_BIO = ("Coach ejecutiva y de vida, escritora, formadora y conferenciante. "
+AUTORA_BIO = ("Senior coach ejecutiva y de vida, escritora, formadora y conferenciante. "
               "30 años acompañando a personas y equipos, online desde Bilbao.")
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
@@ -547,7 +547,7 @@ def listado(posts, v):
         titulo = "Blog de Itxaso Gurrea | Reflexiones sobre estrés, autoestima y cambios vitales"
         if n > 1:
             titulo = "Blog de Itxaso Gurrea · Página %d | Reflexiones sobre estrés, autoestima y cambios vitales" % n
-        descripcion = ("Reflexiones de Itxaso Gurrea, coach ejecutiva y de vida, sobre gestión del estrés, "
+        descripcion = ("Reflexiones de Itxaso Gurrea, senior coach ejecutiva y de vida, sobre gestión del estrés, "
                        "autoestima, liderazgo y cambios vitales y profesionales.")
         jsonld = {
             "@context": "https://schema.org",
@@ -574,7 +574,7 @@ def listado(posts, v):
         if n < paginas:
             prev_next += '  <link rel="next" href="%s">\n' % url_pagina(n + 1)
         doc = cabeza(r, v, titulo, descripcion, url_pagina(n), "website", DOMINIO + "/img/og-itxaso-gurrea.jpg",
-                     "Itxaso Gurrea, coach ejecutiva y de vida", extra=prev_next, jsonld=jsonld)
+                     "Itxaso Gurrea, senior coach ejecutiva y de vida", extra=prev_next, jsonld=jsonld)
         doc += cabecera(r, v)
         doc += """  <main class="section legal-page blog-page">
     <div class="container">
