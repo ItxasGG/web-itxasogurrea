@@ -494,8 +494,8 @@ strong { font-weight: 600; color: var(--ink); }
   color: var(--ink);
 }
 /* La línea de abajo de la frase hace de separación con «Testimonios» */
-#trayectoria { padding-bottom: 0; }
-#trayectoria + #testimonios { border-top: 0; }
+#sobre-mi { padding-bottom: 0; }
+#sobre-mi + #testimonios { border-top: 0; }
 
 /* ---------- Testimonios ---------- */
 /* Cuadrícula: cada fila empieza en la misma línea; el espacio sobrante queda debajo */
