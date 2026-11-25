@@ -397,8 +397,63 @@ def cabecera(r, v, actual_blog=True):
 """.format(r=r, v=v, b=blog_attr)
 
 
+
+# ---------------------------------------------------------------------------
+# Newsletter (componente común: pie de todas las páginas y final de los artículos)
+# ---------------------------------------------------------------------------
+def bloque_newsletter(prefijo, r, variante="pie"):
+    """Bloque «Recibe mis reflexiones en tu correo».
+    prefijo: distingue los id cuando hay dos bloques en la misma página (p. ej. «nl-pie», «nl-art»).
+    r: ruta relativa hasta la raíz de la web («», «../» o «../../»)."""
+    return """<section class="nl nl--{variante}" aria-labelledby="{p}-titulo" data-newsletter-caja>
+  <div class="nl__text">
+    <h2 class="nl__title" id="{p}-titulo">Recibe mis reflexiones en tu correo</h2>
+    <p class="nl__lead">Ideas para vivir y trabajar desde quien eres, no desde la exigencia. Sin spam, y puedes darte de baja cuando quieras.</p>
+  </div>
+  <div class="nl__box">
+    <noscript><p class="nl__noscript">Para suscribirte necesitas activar JavaScript en tu navegador.</p></noscript>
+    <form class="form-card nl__form" data-newsletter data-estado="{p}-estado" novalidate hidden>
+      <div class="nl__fields">
+        <label for="{p}-nombre">Tu nombre
+          <input type="text" id="{p}-nombre" name="firstname" autocomplete="given-name" required aria-describedby="{p}-nombre-error" data-error="{p}-nombre-error" aria-invalid="false">
+          <span class="nl__error" id="{p}-nombre-error" hidden></span>
+        </label>
+        <label for="{p}-email">Tu email
+          <input type="email" id="{p}-email" name="email" autocomplete="email" required aria-describedby="{p}-email-error" data-error="{p}-email-error" aria-invalid="false">
+          <span class="nl__error" id="{p}-email-error" hidden></span>
+        </label>
+      </div>
+      <div class="nl__hp" aria-hidden="true">
+        <label for="{p}-website">No rellenes este campo</label>
+        <input type="text" id="{p}-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <div class="form-consent nl__consent">
+        <input type="checkbox" id="{p}-consent" name="consent" required aria-describedby="{p}-consent-error" data-error="{p}-consent-error" aria-invalid="false">
+        <label for="{p}-consent">He leído y acepto la <a href="{r}politica-privacidad.html">política de privacidad</a> y quiero recibir la newsletter de Itxaso Gurrea.</label>
+      </div>
+      <p class="nl__error nl__error--consent" id="{p}-consent-error" hidden></p>
+      <button type="submit" class="btn btn--primary nl__button">Quiero suscribirme</button>
+      <p class="nl__legal">Responsable: Itxaso Gurrea. Finalidad: enviarte la newsletter. Legitimación: tu consentimiento. Destinatario: HubSpot, proveedor del envío de correos. Derechos: acceso, rectificación, supresión y otros, como se explica en la política de privacidad.</p>
+    </form>
+    <div class="nl__status" id="{p}-estado" role="status" aria-live="polite"></div>
+  </div>
+</section>""".format(p=prefijo, r=r, variante=variante)
+
+
+def scripts_newsletter(r, v):
+    return ('  <script src="{r}newsletter-config.js?v={v}" defer></script>\n'
+            '  <script src="{r}newsletter.js?v={v}" defer></script>\n').format(r=r, v=v)
+
+
+def sangrar(texto, n):
+    return "\n".join((" " * n + l) if l else l for l in texto.split("\n"))
+
+
 def pie(r, v, scripts=""):
     return """  <footer class="footer">
+    <div class="container">
+{newsletter}
+    </div>
     <div class="container footer__bottom">
       <p>© 2026 Itxaso Gurrea. Todos los derechos reservados.</p>
       <nav class="footer__legal" aria-label="Más información">
@@ -409,10 +464,11 @@ def pie(r, v, scripts=""):
       </nav>
     </div>
   </footer>
-{scripts}  <script src="{r}chat.js?v={v}" defer></script>
+{scripts}{nl_scripts}  <script src="{r}chat.js?v={v}" defer></script>
 </body>
 </html>
-""".format(r=r, v=v, scripts=scripts)
+""".format(r=r, v=v, scripts=scripts, newsletter=sangrar(bloque_newsletter("nl-pie", r), 6),
+           nl_scripts=scripts_newsletter(r, v))
 
 
 def cabeza(r, v, titulo, descripcion, canonica, og_tipo, og_imagen, og_alt, extra="", jsonld=None, noindex=False):
@@ -690,6 +746,8 @@ def articulo(p, todos, v):
           <div class="post__cta">
             <a class="btn btn--primary" href="{cta_url}">{cta_texto}</a>
           </div>
+
+{newsletter_articulo}
         </footer>
       </article>
 
@@ -708,7 +766,8 @@ def articulo(p, todos, v):
            in_=ICONO_LINKEDIN, wa_ico=ICONO_WHATSAPP, link=ICONO_ENLACE, url=e(url), bio=e(AUTORA_BIO),
            calendly=CALENDLY, lateral=lateral, redes=redes_sociales, navegacion=navegacion,
            cta_url=e(enlace_propio(p.get("boton_final_enlace") or "../entrevista-gratuita.html")),
-           cta_texto=e(p.get("boton_final_texto") or "Reservar entrevista gratuita"))
+           cta_texto=e(p.get("boton_final_texto") or "Reservar entrevista gratuita"),
+           newsletter_articulo=sangrar(bloque_newsletter("nl-art", r, "articulo"), 10))
     doc += pie(r, v, scripts='  <script src="../blog.js?v=%s" defer></script>\n' % v)
     with open(os.path.join(BLOG, p["slug"] + ".html"), "w", encoding="utf-8") as f:
         f.write(doc)

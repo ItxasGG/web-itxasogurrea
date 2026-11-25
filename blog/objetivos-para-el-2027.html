@@ -61,14 +61,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="../img/logo.svg?v=20261118c">
-  <link rel="stylesheet" href="../style.css?v=20261118c">
+  <link rel="icon" type="image/svg+xml" href="../img/logo.svg?v=20261125a">
+  <link rel="stylesheet" href="../style.css?v=20261125a">
 </head>
 <body>
 
   <header class="header header--sub is-scrolled">
     <div class="container header__inner">
-      <a href="../index.html" class="logo"><img src="../img/logo.svg?v=20261118c" alt="" class="logo__icon">Itxaso Gurrea</a>
+      <a href="../index.html" class="logo"><img src="../img/logo.svg?v=20261125a" alt="" class="logo__icon">Itxaso Gurrea</a>
       <nav class="subnav" aria-label="Navegación principal">
         <a href="../blog.html" aria-current="page">Blog</a>
         <a href="../calendario.html">Calendario</a>
@@ -176,6 +176,40 @@
           <div class="post__cta">
             <a class="btn btn--primary" href="../formaciones/masterclass-objetivos-2027.html">Reservar la masterclass gratuita</a>
           </div>
+
+          <section class="nl nl--articulo" aria-labelledby="nl-art-titulo" data-newsletter-caja>
+            <div class="nl__text">
+              <h2 class="nl__title" id="nl-art-titulo">Recibe mis reflexiones en tu correo</h2>
+              <p class="nl__lead">Ideas para vivir y trabajar desde quien eres, no desde la exigencia. Sin spam, y puedes darte de baja cuando quieras.</p>
+            </div>
+            <div class="nl__box">
+              <noscript><p class="nl__noscript">Para suscribirte necesitas activar JavaScript en tu navegador.</p></noscript>
+              <form class="form-card nl__form" data-newsletter data-estado="nl-art-estado" novalidate hidden>
+                <div class="nl__fields">
+                  <label for="nl-art-nombre">Tu nombre
+                    <input type="text" id="nl-art-nombre" name="firstname" autocomplete="given-name" required aria-describedby="nl-art-nombre-error" data-error="nl-art-nombre-error" aria-invalid="false">
+                    <span class="nl__error" id="nl-art-nombre-error" hidden></span>
+                  </label>
+                  <label for="nl-art-email">Tu email
+                    <input type="email" id="nl-art-email" name="email" autocomplete="email" required aria-describedby="nl-art-email-error" data-error="nl-art-email-error" aria-invalid="false">
+                    <span class="nl__error" id="nl-art-email-error" hidden></span>
+                  </label>
+                </div>
+                <div class="nl__hp" aria-hidden="true">
+                  <label for="nl-art-website">No rellenes este campo</label>
+                  <input type="text" id="nl-art-website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+                <div class="form-consent nl__consent">
+                  <input type="checkbox" id="nl-art-consent" name="consent" required aria-describedby="nl-art-consent-error" data-error="nl-art-consent-error" aria-invalid="false">
+                  <label for="nl-art-consent">He leído y acepto la <a href="../politica-privacidad.html">política de privacidad</a> y quiero recibir la newsletter de Itxaso Gurrea.</label>
+                </div>
+                <p class="nl__error nl__error--consent" id="nl-art-consent-error" hidden></p>
+                <button type="submit" class="btn btn--primary nl__button">Quiero suscribirme</button>
+                <p class="nl__legal">Responsable: Itxaso Gurrea. Finalidad: enviarte la newsletter. Legitimación: tu consentimiento. Destinatario: HubSpot, proveedor del envío de correos. Derechos: acceso, rectificación, supresión y otros, como se explica en la política de privacidad.</p>
+              </form>
+              <div class="nl__status" id="nl-art-estado" role="status" aria-live="polite"></div>
+            </div>
+          </section>
         </footer>
       </article>
 
@@ -230,6 +264,41 @@
   </main>
 
   <footer class="footer">
+    <div class="container">
+      <section class="nl nl--pie" aria-labelledby="nl-pie-titulo" data-newsletter-caja>
+        <div class="nl__text">
+          <h2 class="nl__title" id="nl-pie-titulo">Recibe mis reflexiones en tu correo</h2>
+          <p class="nl__lead">Ideas para vivir y trabajar desde quien eres, no desde la exigencia. Sin spam, y puedes darte de baja cuando quieras.</p>
+        </div>
+        <div class="nl__box">
+          <noscript><p class="nl__noscript">Para suscribirte necesitas activar JavaScript en tu navegador.</p></noscript>
+          <form class="form-card nl__form" data-newsletter data-estado="nl-pie-estado" novalidate hidden>
+            <div class="nl__fields">
+              <label for="nl-pie-nombre">Tu nombre
+                <input type="text" id="nl-pie-nombre" name="firstname" autocomplete="given-name" required aria-describedby="nl-pie-nombre-error" data-error="nl-pie-nombre-error" aria-invalid="false">
+                <span class="nl__error" id="nl-pie-nombre-error" hidden></span>
+              </label>
+              <label for="nl-pie-email">Tu email
+                <input type="email" id="nl-pie-email" name="email" autocomplete="email" required aria-describedby="nl-pie-email-error" data-error="nl-pie-email-error" aria-invalid="false">
+                <span class="nl__error" id="nl-pie-email-error" hidden></span>
+              </label>
+            </div>
+            <div class="nl__hp" aria-hidden="true">
+              <label for="nl-pie-website">No rellenes este campo</label>
+              <input type="text" id="nl-pie-website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form-consent nl__consent">
+              <input type="checkbox" id="nl-pie-consent" name="consent" required aria-describedby="nl-pie-consent-error" data-error="nl-pie-consent-error" aria-invalid="false">
+              <label for="nl-pie-consent">He leído y acepto la <a href="../politica-privacidad.html">política de privacidad</a> y quiero recibir la newsletter de Itxaso Gurrea.</label>
+            </div>
+            <p class="nl__error nl__error--consent" id="nl-pie-consent-error" hidden></p>
+            <button type="submit" class="btn btn--primary nl__button">Quiero suscribirme</button>
+            <p class="nl__legal">Responsable: Itxaso Gurrea. Finalidad: enviarte la newsletter. Legitimación: tu consentimiento. Destinatario: HubSpot, proveedor del envío de correos. Derechos: acceso, rectificación, supresión y otros, como se explica en la política de privacidad.</p>
+          </form>
+          <div class="nl__status" id="nl-pie-estado" role="status" aria-live="polite"></div>
+        </div>
+      </section>
+    </div>
     <div class="container footer__bottom">
       <p>© 2026 Itxaso Gurrea. Todos los derechos reservados.</p>
       <nav class="footer__legal" aria-label="Más información">
@@ -240,7 +309,9 @@
       </nav>
     </div>
   </footer>
-  <script src="../blog.js?v=20261118c" defer></script>
-  <script src="../chat.js?v=20261118c" defer></script>
+  <script src="../blog.js?v=20261125a" defer></script>
+  <script src="../newsletter-config.js?v=20261125a" defer></script>
+  <script src="../newsletter.js?v=20261125a" defer></script>
+  <script src="../chat.js?v=20261125a" defer></script>
 </body>
 </html>
