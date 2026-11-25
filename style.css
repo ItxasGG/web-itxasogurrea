@@ -479,10 +479,12 @@ strong { font-weight: 600; color: var(--ink); }
 }
 .brand-eye__text p:last-child { margin-bottom: 0; }
 
+/* Frase destacada entre dos líneas iguales, con el mismo espacio arriba y abajo */
 .big-quote {
   margin: 0;
-  padding-top: 1.4rem;
+  padding: 3rem 0;
   border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 3.6rem);
   font-weight: 600;
@@ -491,6 +493,9 @@ strong { font-weight: 600; color: var(--ink); }
   text-transform: uppercase;
   color: var(--ink);
 }
+/* La línea de abajo de la frase hace de separación con «Testimonios» */
+#trayectoria { padding-bottom: 0; }
+#trayectoria + #testimonios { border-top: 0; }
 
 /* ---------- Testimonios ---------- */
 /* Cuadrícula: cada fila empieza en la misma línea; el espacio sobrante queda debajo */
